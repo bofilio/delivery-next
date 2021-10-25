@@ -35,7 +35,7 @@ const SignIn = () => {
                             in</button>
                         <div className="text-center mb-6">
                             <Link href="/auth/forgot_password">
-                                <a className="text-gray-500" >forgot password?</a>
+                                <a className="text-gray-500" >forgot password? </a>
                             </Link>
                         </div>
                         <Link href="/auth/signup">
