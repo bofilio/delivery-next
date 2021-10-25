@@ -1,4 +1,4 @@
-# NextJs app that uses Versel DEVELOP PREVIEW SHIP stratigy 
+# NextJs app that uses Versel DEVELOP PREVIEW SHIP strategy 
 ## workflow
 ### DEVELOP
 this is on local for dev stage 
