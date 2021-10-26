@@ -5,7 +5,7 @@ import InputBlock from '../../components/auth/InputBlock'
 const SignIn = () => {
     return (
         <div className="flex lg:flex-row flex-col min-h-screen">
-            <Branding/>
+            <Branding />
             <div className="flex-grow flex lg:min-h-screen lg:justify-center justify-items-start lg:p-0 p-12 lg:items-center">
                 <div className="max-w-xl flex-grow">
                     <div className="mb-12">
@@ -13,7 +13,7 @@ const SignIn = () => {
                         <span className="text-xl text-gray-500">Sign in to your account to continue </span>
                     </div>
                     <form className="flex flex-col">
-                    <InputBlock label="EMAIL ADDRESS" default_value="markclarck@gmail.com"
+                        <InputBlock label="EMAIL ADDRESS" default_value="markclarck@gmail.com"
                             icon={
                                 <svg className="h-6 w-6 text-purple-700" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
@@ -31,8 +31,12 @@ const SignIn = () => {
                                 </svg>
                             }
                         />
-                        <button className="rounded-xl bg-purple-100 text-purple-700 text-base font-bold py-4 px-8 mb-6" disabled>Sign
-                            in</button>
+                        <Link href="/">
+                            <button className="rounded-xl bg-purple-100 text-purple-700 text-base font-bold py-4 px-8 mb-6">
+                                Signin
+                            </button>
+                        </Link>
+
                         <div className="text-center mb-6">
                             <Link href="/auth/forgot_password">
                                 <a className="text-gray-500" >forgot password? </a>

@@ -44,9 +44,12 @@ const SignUp = () => {
                                 </svg>
                             }
                         />
-                        <button className=" rounded-xl bg-purple-700 text-gray-50 font-bold py-4 px-8 mb-6" disabled>
-                            Create an account
-                        </button>
+                        <Link href="/">
+                            <button className=" rounded-xl bg-purple-700 text-gray-50 font-bold py-4 px-8 mb-6" >
+                                Create an account
+                            </button>
+                        </Link>
+
                         <div className="text-center text-gray-500">
                             Already have an account?
                             <Link href="/auth/signin">
