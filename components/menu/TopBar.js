@@ -2,7 +2,7 @@ import React from 'react'
 
 const TopBar = () => {
     return (
-        <div className="flex items-center flex-grow p-8 mb-4">
+        <div className="flex items-center  mb-4">
             <button className="lg:hidden flex items-center justify-center w-12 h-12 rounded-xl bg-purple-900 ml-4 p-3">
                 <svg className="h-5 w-5 text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
@@ -46,7 +46,7 @@ const TopBar = () => {
             <div className="flex-grow"></div>
             <div className="flex h-12 ml-12">
                 <form className="lg:block hidden w-full max-w-sm relative">
-                    <input className="h-full bg-gray-100 focus:outline-none rounded-xl w-full pl-12" placeholder="Search for anything…" type="text" />
+                    <input className="h-full bg-gray-200 focus:outline-none rounded-xl w-full pl-12" placeholder="Search for anything…" type="text" />
                     <button>
                         <svg className="w-4 h-4 absolute left-4 top-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M14.8571 7.42857C14.8571 3.32588 11.5313 0 7.42857 0C3.32588 0 0 3.32588 0 7.42857C0 11.5313 3.32588 14.8571 7.42857 14.8571C9.26857 14.8571 10.96 14.1829 12.2629 13.0743L12.5714 13.3829V14.2857L18.2857 20L20 18.2857L14.2857 12.5714H13.3829L13.0743 12.2629C14.1829 10.96 14.8571 9.26857 14.8571 7.42857ZM2.28571 7.42857C2.28571 4.57143 4.57143 2.28571 7.42857 2.28571C10.2857 2.28571 12.5714 4.57143 12.5714 7.42857C12.5714 10.2857 10.2857 12.5714 7.42857 12.5714C4.57143 12.5714 2.28571 10.2857 2.28571 7.42857Z" fill="black" />
