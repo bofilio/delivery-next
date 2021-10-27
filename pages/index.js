@@ -20,21 +20,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex">
+      <div>
         {<SideBar />}
-        <main className="flex flex-col p-8">
+        <main className="flex flex-col p-8  lg:ml-80 ml-28">
           <TopBar />
-          {<section className="flex flex-col flex-wrap">
-            <div className="flex items-center">
+          <div className="flex items-center">
               <h1 className=" text-2xl font-bold text-gray-900">Explore categories</h1>
               <div className="flex-grow"></div>
               <div className="flex right-0 items-center">
-                <a className=" text-base font-bold text-gray-500" href="#">see all </a>
-                <svg className="text-gray-500" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <a className=" text-base font-bold text-purple-700" href="#">see all </a>
+                <svg className="text-purple-700" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                 </svg>
               </div>
             </div>
+          <section className="flex flex-col flex-wrap">
+            
             <div className="flex mt-8 space-x-8 overflow-x-hidden">
               <Category color="#FB6D3A" title="Popular" options_number={286}
                 icon={
@@ -81,7 +82,7 @@ export default function Home() {
 
             </div>
 
-          </section>}
+          </section>
         </main>
 
       </div>
