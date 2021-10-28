@@ -25,7 +25,7 @@ export default function Home() {
 
       <div>
         {<SideBar />}
-        <main className="flex flex-col p-8  lg:ml-80 ml-28 ">
+        <main className=" relative flex flex-col p-8  lg:ml-80 ml-28 ">
           <TopBar />
           <SectionHead title="Explore categories" />
           <section className="flex space-x-8 overflow-x-auto">
@@ -73,22 +73,21 @@ export default function Home() {
             />
           </section>
           <SectionHead title="Featured restaurants" />
-          <section className="flex flex-row lg:flex-col flex-nowrap lg:flex-wrap   lg:max-h-64 overflow-x-auto">
-            <Restaurant className="mr-8 mb-8 " />
-            <Restaurant className="mr-8 mb-8 " />
-            <Restaurant className="mr-8 mb-8 " />
-            <Restaurant className="mr-8 mb-8 " />
-            <Restaurant className="mr-8 mb-8" />
-            <Restaurant className="mr-8 mb-8" />
-            <Restaurant className=" mb-8" />
+          <section className="flex flex-row lg:flex-col flex-nowrap lg:flex-wrap   lg:max-h-72 overflow-x-auto">
+            <Restaurant  />
+            <Restaurant  />
+            <Restaurant  />
+            <Restaurant  />
+            <Restaurant  />
+            <Restaurant  />
+            <Restaurant  />
           </section>
           <SectionHead title="Acian Food" />
-          <section className="flex items-center space-x-8 overflow-x-auto">
+          <section className="flex items-center bg-white space-x-8 overflow-x-auto">
             <FoodOffer/>
             <FoodOffer/>
             <FoodOffer/>
             <FoodOffer/>
-
           </section>
         </main>
 

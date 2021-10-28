@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Logo from '../Logo'
 const SideBar = ({ className }) => {
   return (
-    <div className={className + " flex flex-col lg:items-stretch items-center  p-4 lg:w-80 w-28 bg-gray-200 h-screen max-h-screen overflow-y-auto  rounded-r-3xl fixed "}>
+    <nav className={className + " flex flex-col lg:items-stretch items-center  p-4 lg:w-80 w-28 bg-gray-200 h-screen max-h-screen overflow-y-auto  rounded-r-3xl fixed "}>
       {/*Logo block*/}
       <div className="flex items-center pt-4 pl-4">
         <Logo variant="normal" text_color="text-gray-900" />
@@ -134,7 +134,7 @@ const SideBar = ({ className }) => {
         </div>
       </div>
       {/*Profile block End*/}
-    </div>
+    </nav>
   )
 }
 

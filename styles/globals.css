@@ -2,12 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
- /*position: fixed;
-  height: 100vh;
-  width: 100vw;
-  overflow: auto;*/
-}
+
 
 .bg-hero-pattern{
 background-image: url('../public/img/Image.png');
@@ -15,36 +10,20 @@ background-image: url('../public/img/Image.png');
 .ads{
     box-shadow: 0px 32px 96px -8px rgba(0, 0, 0, 0.06);
 }
-.tooltip {
-    position: relative;
-    display: inline-block;
-    
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 110%;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
-  }
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
+
+/* costum scroll bars */
+*::-webkit-scrollbar {
+    background: transparent;  
+    width: 6px;
+    height: 6px;
+}
+*:hover::-webkit-scrollbar-thumb {
+ background: rgb(218, 218, 218); 
+ border-radius: 3px;
+}
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(218, 218, 218);
+}

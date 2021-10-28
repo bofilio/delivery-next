@@ -2,7 +2,7 @@ import React from 'react'
 
 const Restaurant = (props) => {
     return (
-        <div className={"flex flex-shrink-0 "+props.className}>
+        <div className={"flex flex-shrink-0 mr-8 mb-8 "+props.className}>
               <div className="bg-gray-200 p-4 rounded-2xl flex-shrink-0">
                 <img className="w-16 h-16" src="/img/burgerKing.png" alt="" />
               </div>

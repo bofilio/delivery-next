@@ -2,7 +2,7 @@ import React from 'react'
 
 const Category = ({icon,color,title,options_number}) => {
     return (
-        <div className="flex flex-col items-center w-36 flex-shrink-0 p-6 bg-gray-200 rounded-xl">
+        <div className="flex flex-col items-center w-36 flex-shrink-0 p-6 bg-gray-200 rounded-xl mb-8">
             <div className="w-12 h-12 p-3 text-gray-100 rounded-xl" style={{backgroundColor:color}}>
                 {icon}
             </div>
