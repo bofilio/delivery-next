@@ -23,12 +23,11 @@ export default function Home() {
       </Head>
 
       <div>
-        {<SideBar />}
-        <main className="flex flex-col p-8  lg:ml-80 ml-28">
+        {<SideBar/>}
+        <main className="flex flex-col p-8  lg:ml-80 ml-28 ">
           <TopBar />
-
           <SectionHead title="Explore categories" />
-          <section className="flex space-x-8">
+          <section className="flex space-x-8 overflow-x-auto">
             <Category color="#FB6D3A" title="Popular" options_number={286}
               icon={
                 <svg className="w-6 h-6 " viewBox="0 0 32 32" fill="#000" xmlns="http://www.w3.org/2000/svg">
@@ -73,8 +72,11 @@ export default function Home() {
             />
           </section>
           <SectionHead title="Featured restaurants" />
-          <section className="flex items-center lg:flex-wrap flex-nowrap">
-            <Restaurant className="mr-8 mb-8"/>
+          <section className="flex flex-row lg:flex-col flex-nowrap lg:flex-wrap   lg:max-h-72 overflow-x-auto">
+            <Restaurant className="mr-8 mb-8 "/>
+            <Restaurant className="mr-8 mb-8 "/>
+            <Restaurant className="mr-8 mb-8 "/>
+             <Restaurant className="mr-8 mb-8 "/>
             <Restaurant className="mr-8 mb-8"/>
             <Restaurant className="mr-8 mb-8"/>
             <Restaurant className=" mb-8"/>
