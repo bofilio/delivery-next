@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 body{
-  position: fixed;
-  height: 100%;
-  width: 100%;
+ /*position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;*/
 }
 
 .bg-hero-pattern{
