@@ -3,7 +3,7 @@ import { ModalProvider } from '../../contexts/ModalContext'
 import OpenModal from '../util/OpenModal'
 import Modal from '../util/Model'
 import CloseModal from '../util/CloseModal'
-import TopFilter from './TopFilter'
+import TopFilter from '../menu/TopFilter'
 
 const TopBar = () => {
     return (
