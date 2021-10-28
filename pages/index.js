@@ -8,6 +8,7 @@ import TopBar from '../components/menu/TopBar'
 import Category from '../components/content/Category'
 import SectionHead from '../components/content/SectionHead'
 import Restaurant from '../components/content/Restaurant'
+import FoodOffer from '../components/content/FoodOffer'
 
 export default function Home() {
   const router = useRouter();
@@ -23,7 +24,7 @@ export default function Home() {
       </Head>
 
       <div>
-        {<SideBar/>}
+        {<SideBar />}
         <main className="flex flex-col p-8  lg:ml-80 ml-28 ">
           <TopBar />
           <SectionHead title="Explore categories" />
@@ -72,14 +73,22 @@ export default function Home() {
             />
           </section>
           <SectionHead title="Featured restaurants" />
-          <section className="flex flex-row lg:flex-col flex-nowrap lg:flex-wrap   lg:max-h-72 overflow-x-auto">
-            <Restaurant className="mr-8 mb-8 "/>
-            <Restaurant className="mr-8 mb-8 "/>
-            <Restaurant className="mr-8 mb-8 "/>
-             <Restaurant className="mr-8 mb-8 "/>
-            <Restaurant className="mr-8 mb-8"/>
-            <Restaurant className="mr-8 mb-8"/>
-            <Restaurant className=" mb-8"/>
+          <section className="flex flex-row lg:flex-col flex-nowrap lg:flex-wrap   lg:max-h-64 overflow-x-auto">
+            <Restaurant className="mr-8 mb-8 " />
+            <Restaurant className="mr-8 mb-8 " />
+            <Restaurant className="mr-8 mb-8 " />
+            <Restaurant className="mr-8 mb-8 " />
+            <Restaurant className="mr-8 mb-8" />
+            <Restaurant className="mr-8 mb-8" />
+            <Restaurant className=" mb-8" />
+          </section>
+          <SectionHead title="Acian Food" />
+          <section className="flex items-center space-x-8 overflow-x-auto">
+            <FoodOffer/>
+            <FoodOffer/>
+            <FoodOffer/>
+            <FoodOffer/>
+
           </section>
         </main>
 
