@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Logo from '../Logo'
 import SideBarMenuItem from '../menu/SideBarMenuItem'
 import SideBareMenu from '../menu/SideBareMenu'
-const SideBar = ({ className,active_id }) => {
+const SideBar = ({ className }) => {
   return (
     <nav className={className + " flex flex-col lg:items-stretch items-center  p-4 lg:w-80 w-28 bg-gray-200 h-screen max-h-screen overflow-y-auto  rounded-r-3xl fixed "}>
       {/*Logo block*/}
@@ -13,7 +13,7 @@ const SideBar = ({ className,active_id }) => {
       {/*Logo block End*/}
       {/*Menu block*/}
       <div className="mt-12 ">
-       <SideBareMenu active_id={active_id}/>
+        <SideBareMenu/>
       </div>
       {/*Menu block End*/}
       {/*Adds block*/}
@@ -44,19 +44,9 @@ const SideBar = ({ className,active_id }) => {
               <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
           </button>
-
         </div>
-        <div className="absolute w-9/12 h-full bg-white ads rounded-xl z-10" style={{ bottom: '-0.6rem' }}>
-
-        </div>
-        <div className="absolute w-7/12 h-full bg-white ads rounded-xl z-0" style={{ bottom: '-1.2rem' }}>
-
-        </div>
-
-        <div>
-
-        </div>
-
+        <div className="absolute w-9/12 h-full bg-white ads rounded-xl z-10" style={{ bottom: '-0.6rem' }}></div>
+        <div className="absolute w-7/12 h-full bg-white ads rounded-xl z-0" style={{ bottom: '-1.2rem' }}></div>
       </div>
       {/*Adds block End*/}
       <div className="flex-grow"></div>

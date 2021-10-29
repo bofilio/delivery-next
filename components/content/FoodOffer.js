@@ -2,7 +2,7 @@ import React from 'react'
 
 const FoodOffer = () => {
     return (
-        <div className="flex flex-col lg:w-1/3 w-full flex-shrink-0 lg:pr-8 pr-0  lg:pb-8 pb-0 ">
+        <div className="flex flex-col lg:w-1/3 w-full flex-shrink-0 lg:p-4 p-0  ">
             <img className="w-full  h-auto rounded-2xl" src="/media/salade.png" alt="" />
             <div className="mt-4 flex items-center justify-between">
                 <h1 className=" text-base text-gray-900 font-bold">Spicy Na Thai Town</h1>
