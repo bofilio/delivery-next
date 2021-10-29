@@ -21,14 +21,11 @@ export default function Home() {
     //router.push('auth/signin','auth/signin');
   }, [])
   return (
-    <div >
-      <PageHead />
-      <SideBar active_id={1}/>
-      <Main>
-        <TopBar />
+    < >     
         <SectionHead title="Explore categories">
           <SeeAllLink to="#" />
         </SectionHead>
+
         <section className="flex space-x-8 overflow-x-auto">
           <Category color="#FB6D3A" title="Popular" options_number={286}
             icon={
@@ -88,24 +85,16 @@ export default function Home() {
           <Restaurant />
         </RestaurantsSection>
 
-
         <SectionHead title="Acian Food" >
           <SeeAllLink to="#" />
         </SectionHead>
-
+        
         <FoodSection>
           <FoodOffer />
           <FoodOffer />
           <FoodOffer />
           <FoodOffer />
         </FoodSection>
-
-      </Main>
-
-
-
-
-
-    </div>
+    </>
   )
 }
