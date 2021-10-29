@@ -11,7 +11,7 @@ const dishes = () => {
     return (
         <div>
             <PageHead />
-            {<SideBar />}
+            <SideBar active_id={3} />
             <Main>
                 <TopBar />
 
