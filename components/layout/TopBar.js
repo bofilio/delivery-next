@@ -7,7 +7,7 @@ import TopFilter from '../menu/TopFilter'
 
 const TopBar = () => {
     return (
-        <div className="flex items-center mb-8">
+        <div className="flex items-center">
             <ModalProvider>
                 <OpenModal className="lg:hidden flex items-center justify-center w-12 h-12 rounded-xl bg-purple-900 lg:ml-4 ml-0 p-3">
                     <svg className="h-5 w-5 text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
