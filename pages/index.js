@@ -13,6 +13,7 @@ import PageHead from '../components/settings/Head'
 import Main from '../components/layout/Main'
 import SeeAllLink from '../components/util/SeeAllLink'
 import RestaurantsSection from '../components/content/RestaurantsSection'
+import FoodSection from '../components/content/FoodSection'
 
 export default function Home() {
   const router = useRouter();
@@ -22,7 +23,7 @@ export default function Home() {
   return (
     <div >
       <PageHead />
-      {<SideBar />}
+      <SideBar active_id={1}/>
       <Main>
         <TopBar />
         <SectionHead title="Explore categories">
@@ -72,9 +73,11 @@ export default function Home() {
             }
           />
         </section>
+
         <SectionHead title="Featured restaurants" >
           <SeeAllLink to="#" />
         </SectionHead>
+
         <RestaurantsSection>
           <Restaurant />
           <Restaurant />
@@ -84,15 +87,19 @@ export default function Home() {
           <Restaurant />
           <Restaurant />
         </RestaurantsSection>
+
+
         <SectionHead title="Acian Food" >
           <SeeAllLink to="#" />
         </SectionHead>
-        <section className="flex flex-wrap items-center bg-white">
+
+        <FoodSection>
           <FoodOffer />
           <FoodOffer />
           <FoodOffer />
           <FoodOffer />
-        </section>
+        </FoodSection>
+
       </Main>
 
 

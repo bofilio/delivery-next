@@ -13,7 +13,7 @@ const explore = () => {
     return (
         <div>
             <PageHead />
-            {<SideBar />}
+            <SideBar active_id={2}/>
             <Main>
                 <TopBar />
                 <SectionHead title="Restaurants nearby">
