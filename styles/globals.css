@@ -44,6 +44,9 @@ background: var(--primary);
 .text-secondary{
     color: var(--secondary);
 }
+.border-secondary{
+    border-color: var(--secondary);
+}
 .bg-success{
     background: var(--success);
 }
@@ -59,17 +62,26 @@ color: var(--success);
 .bg-tr-error{
     background: var(--transparent-error);
 }
+.text-error{
+    color: var(--error)
+    }
 .bg-tertiary{
     background: var(--tertiary);
 }
 .bg-tr-tertiary{
     background: var(--transparent-tertiary);
 }
+.text-tertiary{
+    color:var(--tertiary);
+}
 .bg-light{
     background: var(--light);
 }
 .text-light{
     color: var(--text-light);
+}
+.border-light{
+    border-color: var(--light);
 }
 
 .bg-dark{
@@ -81,16 +93,23 @@ color: var(--success);
 .bg-gray-32{
     background: var(--gray-32);
 }
-
+.border-gray-32{
+    border-color: var(--gray-32);
+}
 .text-gray{
     color: var(--text-gray);
 }
-
+.bg-gray{
+    background: var(--text-gray);
+}
 .text-black{
     color: var(--black);
 }
 
-
+/* typography extention*/
+.text-2xs{
+    font-size: 10px;
+}
 
 
 

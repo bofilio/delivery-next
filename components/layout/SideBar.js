@@ -51,7 +51,8 @@ const SideBar = ({ className }) => {
       {/*Adds block End*/}
       <div className="flex-grow"></div>
       {/*Profile block*/}
-      <div className=" mt-12 mb-4 w-full px-4 flex items-center box-border relative ">
+      <Link href="/auth/signin">
+      <div className=" mt-12 mb-4 w-full px-4 flex items-center box-border relative cursor-pointer">
         <div className="bg-tertiary flex items-end justify-center w-12 h-12 rounded-full ">
           <img className=" w-10 h-10" src="/img/user.svg"></img>
         </div>
@@ -69,6 +70,7 @@ const SideBar = ({ className }) => {
           </svg>
         </div>
       </div>
+      </Link>
       {/*Profile block End*/}
     </nav>
   )
