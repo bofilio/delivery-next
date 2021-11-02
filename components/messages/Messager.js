@@ -2,9 +2,9 @@ import React from 'react'
 import Avatar from '../../components/util/Avatar'
 import Badge from '../../components/util/Badge'
 
-const Messager = ({ tags, active }) => {
+const Messager = ({ tags, active,onClick }) => {
     return (
-        <div className="flex items-start space-x-6">
+        <div className="flex items-start space-x-6 cursor-pointer" onClick={onClick}>
             <Avatar className=" flex-shrink-0 bg-primary" variant="small" img="/img/user.svg" />
             <div className="flex-grow flex flex-col">
                 <div className="flex items-center justify-between">

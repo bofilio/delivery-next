@@ -111,7 +111,17 @@ color: var(--success);
     font-size: 10px;
 }
 
-
+@media (min-width: 1024px) {
+    .lg\:h-160 {
+        height: 40rem/* 288px */;
+    }
+    .lg\:h-168 {
+        height: 42rem/* 288px */;
+    }
+    .lg\:bg-light {
+        background: var(--light);
+    }
+}
 
 .bg-hero-pattern{
 background-image: url('../public/img/Image.png');
