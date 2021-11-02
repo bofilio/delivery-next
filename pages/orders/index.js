@@ -1,11 +1,7 @@
 import React from 'react'
-import OrderCard from '../../components/content/OrderCard'
-import PreviousOrder from '../../components/content/PreviousOrder'
-import SectionHead from '../../components/content/SectionHead'
-import ArrowDownIcon from '../../components/icons/ArrowDownIcon'
-import CalandarIcon from '../../components/icons/CalandarIcon'
-import Calandar from '../../components/icons/CalandarIcon'
-import ClockIcon from '../../components/icons/ClockIcon'
+import OrderCard from '../../components/orders/OrderCard'
+import PreviousOrder from '../../components/orders/PreviousOrder'
+import SectionHead from '../../components/util/SectionHead'
 
 const index = () => {
     return (
