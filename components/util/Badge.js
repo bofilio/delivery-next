@@ -1,22 +1,13 @@
 import React from 'react'
 
-const Badge = ({text, variant,color, className}) => {
-    switch(variant)
-    {
-        case "small":
-            return(
-                <span className={className+" text-xs rounded-md py-1 px-2"+ " bg-tr-"+color + " text-"+color}>
-                    {text}
+const Badge = ({ children, text, variant, color, className }) => {
+            return (
+                <span className={className + " bg-tr-" + color + " text-" + color}>
+                    {text}{children}
                 </span>
-            )         
-        default:
-            return(
-                <span className={className+ " text-xs rounded-md py-1 px-2"+ " bg-tr-"+color + " text-"+color}>
-                    {text}
-                </span>
-            ) 
-    }
-    
+            );
+        
+
 }
 
 export default Badge

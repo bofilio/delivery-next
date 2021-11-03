@@ -1,10 +1,6 @@
 import React from 'react'
-
-import Avatar from '../util/Avatar'
 import InputBlock from '../auth/InputBlock'
-import PhoneIcon from '../icons/PhoneIcon'
 import HomeIcon from '../icons/HomeIcon'
-import UserIcon from '../icons/UserIcon'
 import ModalTitle from './ModalTitle'
 import Tab from '../menu/Tab'
 import { TabulationProvider } from '../../contexts/TabulationContext'

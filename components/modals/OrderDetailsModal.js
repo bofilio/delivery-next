@@ -1,5 +1,5 @@
 import React from 'react'
-import CloseModal from '../../components/modals/CloseModal'
+import CloseModal from './CloseModal'
 import CloseIcon from '../icons/CloseIcon'
 import CreditCardIcon from '../icons/CreditCardIcon'
 import HDotes from '../icons/HDotes'

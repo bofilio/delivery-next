@@ -102,6 +102,9 @@ color: var(--success);
 .bg-gray{
     background: var(--text-gray);
 }
+.bg-tr-gray{
+    background: var(--light);
+}
 .text-black{
     color: var(--black);
 }
