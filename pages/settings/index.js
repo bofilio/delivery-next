@@ -12,6 +12,7 @@ import AddUserIcon from '../../components/icons/AddUserIcon'
 import CashIcon from '../../components/icons/CashIcon'
 import PersonalInfoModal from '../../components/modals/PersonalInfoModal'
 import AdressesModal from '../../components/modals/AdressesModal'
+import MarketingPrefrences from '../../components/modals/MarketingPrefrences'
 const index = () => {
     return (
         <div>
@@ -28,7 +29,7 @@ const index = () => {
                         <SettingLine title="Saved addresses" modalComponent={<AdressesModal/>}>
                             <FavoriteIcon className="w-6 h-6 text-secondary" />
                         </SettingLine>
-                        <SettingLine title="Marketting prefrences">
+                        <SettingLine title="Marketting prefrences" modalComponent={<MarketingPrefrences/>}>
                             <MailIcon className="w-6 h-6 text-tertiary" />
                         </SettingLine>
                     </div>

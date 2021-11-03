@@ -20,6 +20,18 @@ const dishes = () => {
                     </Tab>
                 </div>
                 <TabContent id={1}>
+                    <section className="flex  lg:flex-row flex-col flex-wrap">
+                        <Restaurant />
+                        <Restaurant />
+                        <Restaurant />
+                        <Restaurant />
+                        <Restaurant />
+                        <Restaurant />
+                        <Restaurant />
+                        <Restaurant />
+                    </section>
+                </TabContent>
+                <TabContent id={2}>
                     <FoodSection>
                         <FoodOffer />
                         <FoodOffer />
@@ -39,18 +51,7 @@ const dishes = () => {
                         <FoodOffer />
                     </FoodSection>
                 </TabContent>
-                <TabContent id={2}>
-                    <section className="flex  lg:flex-row flex-col flex-wrap">
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                    </section>
-                </TabContent>
+                
 
             </TabulationProvider>
 

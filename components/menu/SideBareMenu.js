@@ -74,7 +74,6 @@ const SideBareMenu = ({}) => {
              element.active=  element.id==i ?true:false;
             })
             setMenu(state_cpy);
-            console.log(i);
 
         }
     

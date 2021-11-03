@@ -8,39 +8,52 @@ import MenuIcon from '../icons/MenuIcon'
 import DiscountIcon from '../icons/DiscountIcon'
 import ShopingBagIcon from '../icons/ShopingBagIcon'
 import LocationIcon from '../icons/LocationIcon'
+import { useRouter } from "next/router";
+import SearchIcon from '../icons/SearchIcon'
 
+let currentRoute ="/";
 const TopBar = () => {
+    const router = useRouter(); 
+    const goToSearchPage = (e) => {
+        e.preventDefault();
+        if(router.route.indexOf("search") < 0){
+            currentRoute = router.route
+        } 
+        console.log(currentRoute)
+        e.target.value ? router.push("/search") : router.push(currentRoute)
+    }
     return (
         <div className="flex items-center">
             <ModalProvider>
                 <OpenModal className="lg:hidden flex items-center justify-center w-12 h-12 rounded-xl bg-primary text-light lg:ml-4 ml-0 p-3">
-                    <MenuIcon className="w-5 h-5"/>
+                    <MenuIcon className="w-5 h-5" />
                 </OpenModal>
 
                 <Modal className="absolute w-full h-full top-0 left-0">
-                    <TopBarFiltersModal/>
+                    <TopBarFiltersModal />
                 </Modal>
             </ModalProvider>
 
             <div className="p-3 lg:flex hidden space-x-6">
                 <TopFilter variant="md" placeholder="San Francisco, California"
-                    icon={<LocationIcon className="w-6 h-6 text-primary"/>}
+                    icon={<LocationIcon className="w-6 h-6 text-primary" />}
                 />
                 <TopFilter variant="md" placeholder="Pick up"
-                    icon={<ShopingBagIcon className="w-6 h-6 text-secondary"/>}
+                    icon={<ShopingBagIcon className="w-6 h-6 text-secondary" />}
                 />
                 <TopFilter variant="md" placeholder="Best deals"
-                    icon={<DiscountIcon className="w-6 h-6 text-tertiary"/>}
+                    icon={<DiscountIcon className="w-6 h-6 text-tertiary" />}
                 />
             </div>
             <div className="flex-grow"></div>
             <div className="flex h-12 ml-12">
                 <form className="lg:block hidden w-full max-w-sm relative">
-                    <input className="h-full bg-light focus:outline-none rounded-xl w-full pl-12" placeholder="Search for anything…" type="text" />
-                    <button>
-                        <svg className="w-4 h-4 absolute left-4 top-4 text-dark" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M14.8571 7.42857C14.8571 3.32588 11.5313 0 7.42857 0C3.32588 0 0 3.32588 0 7.42857C0 11.5313 3.32588 14.8571 7.42857 14.8571C9.26857 14.8571 10.96 14.1829 12.2629 13.0743L12.5714 13.3829V14.2857L18.2857 20L20 18.2857L14.2857 12.5714H13.3829L13.0743 12.2629C14.1829 10.96 14.8571 9.26857 14.8571 7.42857ZM2.28571 7.42857C2.28571 4.57143 4.57143 2.28571 7.42857 2.28571C10.2857 2.28571 12.5714 4.57143 12.5714 7.42857C12.5714 10.2857 10.2857 12.5714 7.42857 12.5714C4.57143 12.5714 2.28571 10.2857 2.28571 7.42857Z" fill="CurrentColor" />
-                        </svg>
+                    <input className="h-full bg-light focus:outline-none rounded-xl w-full pl-12"
+                        placeholder="Search for anything…"
+                        type="text"
+                        onChange={(e) => goToSearchPage(e)} />
+                    <button onClick={(e)=>{e.preventDefault()}}>
+                        <SearchIcon className="w-4 h-4 absolute left-4 top-4 text-dark"/>
                     </button>
 
                 </form>
