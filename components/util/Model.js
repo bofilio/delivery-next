@@ -5,8 +5,8 @@ const Model = ({ children,className }) => {
     const [open, setopen] = React.useContext(ModalContext);
 
     return (
-        <div className={(open ? "flex" : "hidden pointer-events-none") + " "+className }>
-            <CloseModal className="absolute w-full h-full bg-gray-900 opacity-50">
+        <div className={(open ? "flex" : "hidden") + " "+className } style={{marginTop:0}}>
+            <CloseModal className="absolute w-full h-full bg-dark opacity-50">
             </CloseModal>
             {children}
 
