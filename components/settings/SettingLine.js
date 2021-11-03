@@ -1,8 +1,8 @@
 import React from 'react'
 import ArrowRight from '../../components/icons/ArrowRight'
 import { ModalProvider } from '../../contexts/ModalContext'
-import OpenModal from '../util/OpenModal'
-import Modal from '../util/Model'
+import OpenModal from '../modals/OpenModal'
+import Modal from '../modals/Modal'
 
 const SettingLine = ({ children, title,modalComponent }) => {
     return (

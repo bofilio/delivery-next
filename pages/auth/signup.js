@@ -21,13 +21,13 @@ const SignUp = () => {
 
                     <form className="flex flex-col">
                         <div className="space-y-12 mb-12">
-                            <InputBlock variant="normal" color="primary" label="FULL NAME" type="text" placeholder="Enter yout Name"
+                            <InputBlock variant="md" color="primary" label="FULL NAME" type="text" placeholder="Enter yout Name"
                                 icon={<UserIcon className="w-6 h-6" />}
                             />
-                            <InputBlock variant="normal" color="primary" label="EMAIL ADDRESS" placeholder="Enter your email" type="email"
+                            <InputBlock variant="md" color="primary" label="EMAIL ADDRESS" placeholder="Enter your email" type="email"
                                 icon={<MailIcon className="w-6 h-6" />}
                             />
-                            <InputBlock variant="normal" color="primary" label="PASSWORD" placeholder="Enter your password" type="password"
+                            <InputBlock variant="md" color="primary" label="PASSWORD" placeholder="Enter your password" type="password"
                                 icon={<KeyIcon className="w-6 h-6" />}
                             />
                         </div>

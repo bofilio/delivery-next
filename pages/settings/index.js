@@ -11,6 +11,7 @@ import QuestionMarkIcon from '../../components/icons/QuestionMarkIcon'
 import AddUserIcon from '../../components/icons/AddUserIcon'
 import CashIcon from '../../components/icons/CashIcon'
 import PersonalInfoModal from '../../components/modals/PersonalInfoModal'
+import AdressesModal from '../../components/modals/AdressesModal'
 const index = () => {
     return (
         <div>
@@ -24,7 +25,7 @@ const index = () => {
                         <SettingLine title="Personal information" modalComponent={<PersonalInfoModal/>}>
                             <UserIcon className="w-6 h-6 text-primary" />
                         </SettingLine>
-                        <SettingLine title="Saved addresses">
+                        <SettingLine title="Saved addresses" modalComponent={<AdressesModal/>}>
                             <FavoriteIcon className="w-6 h-6 text-secondary" />
                         </SettingLine>
                         <SettingLine title="Marketting prefrences">

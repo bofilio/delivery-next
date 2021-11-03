@@ -2,28 +2,28 @@ import React from 'react'
 
 const InputBlock = ({icon,label,default_value,type,placeholder,color, variant}) => {
     switch(variant){
-        case "small":
+        case "sm":
             return (
                 <div className="flex items-center">
                     <div className={"bg-tr-"+color+ " text-"+color +" w-12 h-12 flex items-center justify-center rounded-2xl"}>
                         {icon}
                     </div>
                     <div className="flex flex-col pl-6 h-16 border-b-2 border-light justify-around flex-grow ">
-                        <label className="text-xs text-dark font-bold" htmlFor="fullname">{label}</label>
+                        <label className="text-xs text-dark font-bold uppercase" htmlFor="fullname">{label}</label>
                         <input className="w-full text-gray focus:outline-none" name="fullname" type={type}
                             placeholder={placeholder} defaultValue={default_value} onChange={() => { }} />
                     </div>
                 </div>
             );break;
             
-        case "normal":
+        case "md":
             return (
                 <div className="flex items-center">
                     <div className={"bg-tr-"+color+ " text-"+color +" w-16 h-16  flex items-center justify-center rounded-2xl"}>
                         {icon}
                     </div>
                     <div className="flex flex-col pl-6 h-20 border-b-2 border-light justify-around flex-grow ">
-                        <label className="text-xs text-dark font-bold" htmlFor="fullname">{label}</label>
+                        <label className="text-xs text-dark font-bold uppercase" htmlFor="fullname">{label}</label>
                         <input className="w-full text-xl text-gray focus:outline-none" name="fullname" type={type}
                             placeholder={placeholder} defaultValue={default_value} onChange={() => { }} />
                     </div>

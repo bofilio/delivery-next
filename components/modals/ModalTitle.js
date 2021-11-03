@@ -1,5 +1,5 @@
 import React from 'react'
-import CloseModal from '../util/CloseModal'
+import CloseModal from './CloseModal'
 import CloseIcon from '../icons/CloseIcon'
 
 

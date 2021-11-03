@@ -25,19 +25,19 @@ const PersonalInfoModal = () => {
             <div className="mt-8">
                 <h6 className="text-gray">Profile details</h6>
                 <form className="flex flex-col mt-6 space-y-6">
-                    <InputBlock variant="small" color="primary" label="FULL NAME" type="text" placeholder="Enter yout Name"
+                    <InputBlock variant="sm" color="primary" label="FULL NAME" type="text" placeholder="Enter yout Name"
                         default_value="Mark Clark"
                         icon={
                             <UserIcon className="w-6 h-6" />
                         }
                     />
-                    <InputBlock variant="small" color="secondary" label="EMAIL ADDRESS" type="email" placeholder="Enter your email Adress"
+                    <InputBlock variant="sm" color="secondary" label="EMAIL ADDRESS" type="email" placeholder="Enter your email Adress"
                         default_value="markclarck@gmail.com"
                         icon={
                             <MailIcon className="w-6 h-6" />
                         }
                     />
-                    <InputBlock variant="small" color="tertiary" label="Phone Number" type="phone" placeholder="Enter A Phone"
+                    <InputBlock variant="sm" color="tertiary" label="Phone Number" type="phone" placeholder="Enter A Phone"
                         default_value="+1(234)5678900"
                         icon={
                             <PhoneIcon className=" w-6 h-6" />

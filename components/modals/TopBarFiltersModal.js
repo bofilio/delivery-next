@@ -1,5 +1,5 @@
 import React from 'react'
-import CloseModal from '../util/CloseModal'
+import CloseModal from './CloseModal'
 import TopFilter from '../menu/TopFilter'
 import CloseIcon from '../icons/CloseIcon'
 import LocationIcon from '../icons/LocationIcon'

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { ModalContext } from '../../contexts/ModalContext';
 import CloseModal from './CloseModal';
-const Model = ({ children,className }) => {
+const Modal = ({ children,className }) => {
     const [open, setopen] = React.useContext(ModalContext);
 
     return (
@@ -14,4 +14,4 @@ const Model = ({ children,className }) => {
     )
 }
 
-export default Model
+export default Modal
