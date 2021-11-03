@@ -1,6 +1,6 @@
 import React from 'react'
-import Modal from '../../components/util/Model'
-import OpenModal from '../../components/util/OpenModal.js'
+import Modal from '../../components/modals/Modal'
+import OpenModal from '../../components/modals/OpenModal.js'
 import { ModalProvider } from '../../contexts/ModalContext'
 import OderTracker from './OderTracker'
 const OrderCard = () => {

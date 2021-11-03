@@ -1,5 +1,5 @@
 import React from 'react'
-import CloseModal from '../util/CloseModal'
+import CloseModal from '../modals/CloseModal'
 import ClockIcon from '../icons/ClockIcon'
 import MapIcon from '../icons/MapIcon'
 import CheckIcon from '../icons/CheckIcon'
