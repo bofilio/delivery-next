@@ -3,7 +3,7 @@ import CloseModal from '../../modals/CloseModal'
 import CloseIcon from '../../icons/CloseIcon'
 import CreditCardIcon from '../../icons/CreditCardIcon'
 import HDotes from '../../icons/HDotes'
-import StartIcon from '../../icons/StartIcon'
+import StarIcon from '../../icons/StarIcon'
 import AddUserIcon from '../../icons/AddUserIcon'
 import Modal from '../../modals/Modal'
 const OderDetails = () => {
@@ -78,11 +78,11 @@ const OderDetails = () => {
                 <h1 className="text-xl font-semibold">Review your order</h1>
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                        <StartIcon className="w-8 h-8 text-tertiary" />
-                        <StartIcon className="w-8 h-8 text-tertiary" />
-                        <StartIcon className="w-8 h-8 text-tertiary" />
-                        <StartIcon className="w-8 h-8 text-tertiary" />
-                        <StartIcon className="w-8 h-8 text-gray" />
+                        <StarIcon className="w-8 h-8 text-tertiary" />
+                        <StarIcon className="w-8 h-8 text-tertiary" />
+                        <StarIcon className="w-8 h-8 text-tertiary" />
+                        <StarIcon className="w-8 h-8 text-tertiary" />
+                        <StarIcon className="w-8 h-8 text-gray" />
                     </div>
                     <button className="text-light font-semibold bg-primary py-2 px-4 rounded-xl">Submit</button>
                 </div>
