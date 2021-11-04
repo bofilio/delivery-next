@@ -78,10 +78,10 @@ const SideBareMenu = ({}) => {
         }
     
     return (
-        <>
+        <div className="flex flex-col items-center">
             {
                 menu.map(item => (
-                    <div key={item.id} i={item.id} onClick={(e,i)=>handleActivation(e,item.id)}>
+                    <div className=" sm:w-full md:w-auto lg:w-full w-full" key={item.id} i={item.id} onClick={(e,i)=>handleActivation(e,item.id)}>
                         <SideBarMenuItem to={item.to} title={item.title} active={item.active} badge={item.badge} >
                             {item.icon} 
                         </SideBarMenuItem>
@@ -90,7 +90,7 @@ const SideBareMenu = ({}) => {
                 ))
             }
 
-        </>
+        </div>
     )
 }
 

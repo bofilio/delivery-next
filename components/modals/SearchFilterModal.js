@@ -91,7 +91,6 @@ const SearchFilterModal = () => {
                     </Badge>
                 </div>
             </div>
-           
             {/**Bottom btns */}
             
                 <button className=" mt-12 text-lg px-8 py-4 bg-primary text-light rounded-xl flex-grow">

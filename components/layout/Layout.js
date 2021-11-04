@@ -8,7 +8,7 @@ const Layout = ({children}) => {
     return (
         <>
             <PageHead />
-            <SideBar />
+            <SideBar className="md:flex hidden lg:w-80 w-28 rounded-r-3xl"/>
             <Main>
                 <TopBar />
                 {children}

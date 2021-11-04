@@ -14,7 +14,7 @@ const Logo = ({variant,text_color}) => {
             return (
                 <div className="flex items-center">
                     <img className="w-10 h-8 mr-2" src={logo_img} />
-                    <h1 className={ text_color+" lg:block hidden text-lg font-bold"}>Nibble</h1>
+                    <h1 className={ text_color+"sm:block md:hidden lg:block block  text-lg font-bold"}>Nibble</h1>
                 </div>
             );
             default: return(

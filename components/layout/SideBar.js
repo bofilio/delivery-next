@@ -7,14 +7,14 @@ import FireIcon from '../icons/FireIcon'
 import Badge from '../util/Badge'
 const SideBar = ({ className }) => {
   return (
-    <nav className={className + " bg-light flex flex-col lg:items-stretch items-center  p-4 lg:w-80 w-28  h-screen max-h-screen overflow-y-auto  rounded-r-3xl fixed "}>
+    <nav className={className + " fixed bg-light flex-col lg:items-stretch items-center p-4 h-screen max-h-screen overflow-y-auto    "}>
       {/*Logo block*/}
       <div className="flex items-center pt-4 pl-4">
         <Logo variant="normal" text_color="text-black" />
       </div>
       {/*Logo block End*/}
       {/*Menu block*/}
-      <div className="mt-12 ">
+      <div className="mt-12 w-full">
         <SideBareMenu/>
       </div>
       {/*Menu block End*/}
@@ -33,7 +33,7 @@ const SideBar = ({ className }) => {
             <FireIcon className="w-8 h-8"/>
           </Badge>
           <h1 className="text-center text-dark text-base font-bold mt-6">
-            Free delivery on all orders over <span className="text-red-500">$25</span>
+            Free delivery on all orders over <span className="text-secondary">$25</span>
           </h1>
           <p className=" text-gray text-center  text-sm mt-2">
             It is a limited time offer that will expire soon.
@@ -56,12 +56,12 @@ const SideBar = ({ className }) => {
         <div className="bg-tertiary flex items-end justify-center w-12 h-12 rounded-full ">
           <img className=" w-10 h-10" src="/img/user.svg"></img>
         </div>
-        <div className="lg:flex hidden flex-col ml-5">
+        <div className=" sm:flex md:hidden lg:flex flex flex-col ml-5">
           <h1 className="text-sm text-dark font-bold">Mark Clarke</h1>
           <p className=" text-gray text-xs">markclarke@gmail.com</p>
         </div>
         <div className="flex-grow"></div>
-        <div className="lg:flex hidden flex-col">
+        <div className="sm:flex md:hidden lg:flex flex flex-col">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
           </svg>
