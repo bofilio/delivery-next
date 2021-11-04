@@ -24,7 +24,7 @@ const TopBar = () => {
         if (router.route.indexOf("search") < 0) {
             currentRoute = router.route
         }
-        console.log(currentRoute)
+        //go to search page when use search for somthing ,and go back whaen he clears the search input
         e.target.value ? router.push("/search") : router.push(currentRoute)
     }
     return (

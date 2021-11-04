@@ -84,13 +84,13 @@ const index = () => {
 
                 <div className=" w-full flex flex-col space-y-4">
                     <div className="flex items-center space-x-4">
-                        <Badge className="cursor-pointer" variant="small" text="I didn’t get my order." color="primary" />
-                        <Badge className="cursor-pointer" variant="small" text="I have received a wrong order." color="primary" />
+                        <Badge className="cursor-pointer rounded-md" variant="small" text="I didn’t get my order." color="primary" />
+                        <Badge className="cursor-pointer rounded-md" variant="small" text="I have received a wrong order." color="primary" />
                     </div>
                     <div className="w-full flex space-x-6">
                         <div className="flex-grow flex items-center bg-white rounded-lg space-x-4 px-4">
                             <AttachFileIcon className="w-5 h-5 cursor-pointer" />
-                            <input className="flex-grow focus:outline-none" placeholder="message" />
+                            <input className="w-full focus:outline-none" placeholder="message" />
                         </div>
                         <button className="p-3 bg-primary rounded-lg">
                             <MailIcon className="w-5 h-5 text-white" />
