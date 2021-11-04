@@ -66,7 +66,7 @@ const TopBar = () => {
                     <button className=" flex items-center justify-center w-12 h-12 " >
                         <SearchIcon className="w-5 h-5" />
                     </button>
-                    <input className="hidden w-full bg-light focus:outline-none rounded-xl "
+                    <input className=" w-full bg-light focus:outline-none rounded-xl "
                         placeholder="Search for anything…"
                         type="text"
                         onChange={(e) => goToSearchPage(e)} />
