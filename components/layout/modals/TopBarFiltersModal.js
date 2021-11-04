@@ -1,10 +1,10 @@
 import React from 'react'
-import CloseModal from './CloseModal'
-import TopFilter from '../menu/TopFilter'
-import CloseIcon from '../icons/CloseIcon'
-import LocationIcon from '../icons/LocationIcon'
-import ShopingBagIcon from '../icons/ShopingBagIcon'
-import DiscountIcon from '../icons/DiscountIcon'
+import CloseModal from '../../modals/CloseModal'
+import TopFilter from '../../menu/TopFilter'
+import CloseIcon from '../../icons/CloseIcon'
+import LocationIcon from '../../icons/LocationIcon'
+import ShopingBagIcon from '../../icons/ShopingBagIcon'
+import DiscountIcon from '../../icons/DiscountIcon'
 const TopBarFiltersModal = () => {
     return (
         <div className="flex relative  flex-col bg-white shadow-lg z-50 p-8 w-full h-full ">

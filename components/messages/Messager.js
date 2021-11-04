@@ -2,10 +2,10 @@ import React from 'react'
 import Avatar from '../../components/util/Avatar'
 import Badge from '../../components/util/Badge'
 
-const Messager = ({ tags, active,onClick }) => {
+const Messager = ({ tags, active, onClick }) => {
     return (
         <div className="flex items-start space-x-6 cursor-pointer" onClick={onClick}>
-            <Avatar className=" flex-shrink-0 bg-primary" variant="small" img="/img/user.svg" />
+            <Avatar className=" flex-shrink-0 bg-primary" img="/img/user.svg" />
             <div className="flex-grow flex flex-col">
                 <div className="flex items-center justify-between">
                     <span>John Smith, CEO </span>
@@ -24,15 +24,19 @@ const Messager = ({ tags, active,onClick }) => {
                     }
                 </div>
 
-                {tags && <div className="mt-4 flex space-x-5">
-                    {
-                        tags.map(
-                            tag => (
-                                <Badge key={tag.text} variant="small" color={tag.color} text={tag.text} />
+                {
+                    tags &&
+                    <div className="mt-4 flex space-x-5">
+                        {
+                            tags.map(
+                                tag => (
+                                    <Badge key={tag.text} color={tag.color} >
+                                        {tag.text}
+                                    </Badge>
+                                )
                             )
-                        )
-                    }
-                </div>
+                        }
+                    </div>
                 }
 
             </div>

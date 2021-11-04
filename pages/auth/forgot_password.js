@@ -2,13 +2,13 @@ import React, { useContext, useState, Fragment } from 'react'
 import Branding from '../../components/auth/Branding'
 import InputBlock from '../../components/auth/InputBlock'
 import MailIcon from '../../components/icons/MailIcon'
-import ForgotPasswordModal from '../../components/modals/ForgotPasswordModal'
+import ForgotPasswordModal from '../../components/auth/modals/ForgotPasswordModal'
 import Modal from '../../components/modals/Modal'
 import OpenModal from '../../components/modals/OpenModal.js'
 import { ModalProvider } from '../../contexts/ModalContext'
 
 const ForgotPassword = () => {
-   
+
     return (
         <Fragment>
             <div className="flex lg:flex-row flex-col min-h-screen">
@@ -21,8 +21,8 @@ const ForgotPassword = () => {
                         </div>
                         <div className="flex flex-col space-y-12">
                             {/*<!-- component-->*/}
-                            <InputBlock variant="md" color="primary" label="EMAIL ADDRESS" default_value="markclark@gmail.com"  type="email"
-                                icon={<MailIcon className="w-6 h-6"/>}
+                            <InputBlock variant="md" color="primary" label="EMAIL ADDRESS" default_value="markclark@gmail.com" type="email"
+                                icon={<MailIcon className="w-6 h-6" />}
                             />
                             {/*modal*/}
                             <ModalProvider>
@@ -31,9 +31,9 @@ const ForgotPassword = () => {
                                         Continue
                                     </div>
                                 </OpenModal>
-                                <Modal className="fixed top-0 left-0 w-full h-full   items-center justify-center z-40">
-                                   <ForgotPasswordModal/>
-                                </Modal>
+
+                                <ForgotPasswordModal />
+
                             </ModalProvider>
                         </div>
                     </div>

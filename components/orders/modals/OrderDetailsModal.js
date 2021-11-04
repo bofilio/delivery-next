@@ -1,12 +1,14 @@
 import React from 'react'
-import CloseModal from './CloseModal'
-import CloseIcon from '../icons/CloseIcon'
-import CreditCardIcon from '../icons/CreditCardIcon'
-import HDotes from '../icons/HDotes'
-import StartIcon from '../icons/StartIcon'
-import AddUserIcon from '../icons/AddUserIcon'
+import CloseModal from '../../modals/CloseModal'
+import CloseIcon from '../../icons/CloseIcon'
+import CreditCardIcon from '../../icons/CreditCardIcon'
+import HDotes from '../../icons/HDotes'
+import StartIcon from '../../icons/StartIcon'
+import AddUserIcon from '../../icons/AddUserIcon'
+import Modal from '../../modals/Modal'
 const OderDetails = () => {
     return (
+        <Modal className="fixed flex justify-end top-0 left-0 w-full h-full items-center z-40">
         <div className="relative text-dark flex flex-col  bg-white h-full w-full overflow-y-auto max-w-sm rounded-l-3xl p-8">
             <CloseModal className=" z-50 absolute top-8 right-8 ">
                 <div className=" bg-light p-2 rounded-lg ">
@@ -98,6 +100,7 @@ const OderDetails = () => {
 
 
         </div>
+        </Modal>
     )
 }
 

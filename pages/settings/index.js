@@ -1,8 +1,8 @@
 import React from 'react'
 import SectionHead from '../../components/util/SectionHead'
 import SettingLine from '../../components/settings/SettingLine'
-import FavoriteIcon from '../../components/icons/FavoriteIcon'
 /**Icons */
+import FavoriteIcon from '../../components/icons/FavoriteIcon'
 import MailIcon from '../../components/icons/MailIcon'
 import UserIcon from '../../components/icons/UserIcon'
 import WalletIcon from '../../components/icons/WalletIcon'
@@ -10,14 +10,14 @@ import CreditCardIcon from '../../components/icons/CreditCardIcon'
 import QuestionMarkIcon from '../../components/icons/QuestionMarkIcon'
 import AddUserIcon from '../../components/icons/AddUserIcon'
 import CashIcon from '../../components/icons/CashIcon'
-import PersonalInfoModal from '../../components/modals/PersonalInfoModal'
-import AdressesModal from '../../components/modals/AdressesModal'
-import MarketingPrefrences from '../../components/modals/MarketingPrefrences'
+/**Modals */
+import PersonalInfoModal from '../../components/settings/modals/PersonalInfoModal'
+import AdressesModal from '../../components/settings/modals/AdressesModal'
+import MarketingPrefrences from '../../components/settings/modals/MarketingPrefrences'
 const index = () => {
     return (
         <div>
             <SectionHead title="Settings" />
-
             <div className="space-y-12">
                 {/**General settings */}
                 <div className="text-dark space-y-8">

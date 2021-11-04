@@ -13,14 +13,14 @@ import Message from '../../components/messages/Message'
 
 const index = () => {
     const [chatOpen, setchatOpen] = React.useState(false)
-    const toggleChat=()=>{
+    const toggleChat = () => {
         setchatOpen(!chatOpen);
     }
-    
+
     return (
         <div className="flex  flex-grow  items-start w-full space-x-8 mt-12">
             {/**Contacts Component */}
-            <div className={(chatOpen?"lg:flex hidden":"flex" )+ " lg:w-1/2 w-full  h-full flex-col lg:pr-6 pr-0 overflow-y-auto "}>
+            <div className={(chatOpen ? "lg:flex hidden" : "flex") + " lg:w-1/2 w-full  h-full flex-col lg:pr-6 pr-0 overflow-y-auto "}>
                 <SectionHead title="Messages" className="mt-0">
                     <Filter value="Recent">
                         <FilterIcon className="w-4 h-4" />
@@ -28,20 +28,20 @@ const index = () => {
                 </SectionHead>
                 <div className="mt-8 space-y-6 text-xs text-gray">
                     <Messager onClick={toggleChat} tags={[{ text: "Promotion", color: "primary" }, { text: "Expire soon", color: 'secondary' }]} active />
-                    <Messager onClick={toggleChat}/>
                     <Messager onClick={toggleChat} />
-                    <Messager  onClick={toggleChat} tags={[{ text: "Promotion", color: "primary" }]} />
-                    <Messager  onClick={toggleChat} />
-                    <Messager  onClick={toggleChat} />
-                    <Messager  onClick={toggleChat} />
-                    <Messager  onClick={toggleChat} />
-                    <Messager  onClick={toggleChat} />
+                    <Messager onClick={toggleChat} />
+                    <Messager onClick={toggleChat} tags={[{ text: "Promotion", color: "primary" }]} />
+                    <Messager onClick={toggleChat} />
+                    <Messager onClick={toggleChat} />
+                    <Messager onClick={toggleChat} />
+                    <Messager onClick={toggleChat} />
+                    <Messager onClick={toggleChat} />
                 </div>
             </div>
             {/**Chat Component */}
-            <div className={(chatOpen?"":"lg:block hidden " ) + " lg:sticky absolute  top-0 right-0 lg:w-1/2 w-full lg:h-168 h-full overflow-y-auto lg:bg-light bg-white p-8 text-gray lg:rounded-xl rounded-none"} >
+            <div className={`${(chatOpen ? "" : "lg:block hidden")} lg:sticky absolute  top-0 right-0 lg:w-1/2 w-full lg:h-168 h-full overflow-y-auto lg:bg-light bg-white p-8 text-gray lg:rounded-xl rounded-none`} >
                 <button className="lg:hidden inline-block p-4 bg-primary rounded-xl  mb-16" onClick={toggleChat}>
-                    <ArrowLeft className=" w-4 h-4 text-light"/>
+                    <ArrowLeft className=" w-4 h-4 text-light" />
                 </button>
                 <div className="w-full  flex items-center justify-between box-border relative cursor-pointer">
                     <div className="flex items-center space-x-5">

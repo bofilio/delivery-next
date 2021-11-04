@@ -6,7 +6,7 @@ const OpenModal = ({children,className}) => {
         setopen(true);
     }
     return (
-        <div className={className+ " cursor-pointer"} onClick={handleOpen}>
+        <div className={`${className} cursor-pointer`} onClick={handleOpen}>
             {children}
         </div>
     )

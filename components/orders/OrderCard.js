@@ -2,7 +2,7 @@ import React from 'react'
 import Modal from '../../components/modals/Modal'
 import OpenModal from '../../components/modals/OpenModal.js'
 import { ModalProvider } from '../../contexts/ModalContext'
-import OderTrackerModal from '../modals/OderTrackerModal'
+import OderTrackerModal from './modals/OderTrackerModal'
 const OrderCard = () => {
     return (
         <div className="flex flex-col justify-between lg:w-80 w-full p-4 rounded-2xl bg-light lg:mr-8 mr-0 lg:mb-8 mb-6">
@@ -24,13 +24,10 @@ const OrderCard = () => {
                     <OpenModal>
                         <button className="px-3 py-2 bg-primary text-light rounded-lg">Track</button>
                     </OpenModal>
-                    <Modal className="fixed flex justify-end top-0 left-0 w-full h-full   items-center z-40">
-                        <OderTrackerModal/>
-                    </Modal>
-
+                    <OderTrackerModal />
                 </ModalProvider>
             </div>
-            {/**component */}
+            {/** convert that to component later */}
             <div className="mt-6 flex items-center bg-gray-32 rounded-sm">
                 <div className="flex  w-2/12 pr-1" >
                     <span className="h-1 w-full bg-secondary rounded-sm"></span>

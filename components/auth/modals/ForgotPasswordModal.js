@@ -1,8 +1,10 @@
 import React from 'react'
-import CloseModal from './CloseModal'
-import CloseIcon from '../icons/CloseIcon'
+import CloseModal from '../../modals/CloseModal'
+import CloseIcon from '../../icons/CloseIcon'
+import Modal from '../../modals/Modal'
 const ForgotPasswordModal = () => {
     return (
+        <Modal className="fixed top-0 left-0 w-full h-full   items-center justify-center z-40">
         <div className=" relative flex flex-col items-center bg-white  max-w-md shadow-lg z-50 p-8 overflow-y-auto rounded-2xl">
             {/*<!-- Colose X absolute position-->*/}
             <CloseModal className=" z-50 absolute top-8 right-8 ">
@@ -21,15 +23,16 @@ const ForgotPasswordModal = () => {
                 We have just sent an email with a password reset link to
                 <span className="text-dark font-bold"> markclarke@gmail.com.</span>
             </p>
-            <div className="flex justify-center w-full mt-12 ">
-                <CloseModal className="px-4 text-center bg-primary p-4 rounded-lg text-light hover:bg-purple-700 mr-4 w-40 font-bold">
+            <div className="flex justify-center w-full mt-12 space-x-4">
+                <CloseModal className=" p-4 text-center rounded-lg text-light bg-primary hover:bg-purple-700 w-40 font-bold">
                     Got it
                 </CloseModal>
-                <button className="px-4 text-center bg-light p-4 rounded-lg text-dark hover:text-purple-700 w-40 font-bold">
+                <button className=" text-center bg-light p-4 rounded-lg text-dark hover:text-purple-700 w-40 font-bold">
                     Send again
                 </button>
             </div>
         </div>
+        </Modal>
     )
 }
 

@@ -1,11 +1,11 @@
 import React from 'react'
-import Logo from '../Logo'
+import Logo from '../util/Logo'
 
 const Branding = () => {
    
     return (
-        <div className="lg:w-2/5 lg:min-h-screen w-full h-80 lg:rounded-r-3xl lg:rounded-bl-none rounded-b-3xl bg-hero-pattern bg-cover bg-no-repeat flex justify-center items-center">
-            <Logo variant="big" text_color="text-gray-100"/>
+        <div className="flex justify-center items-center lg:w-2/5 w-full lg:min-h-screen h-80 lg:rounded-r-3xl rounded-b-3xl lg:rounded-bl-none  bg-hero-pattern bg-cover bg-no-repeat ">
+            <Logo variant="big" text_color="text-light"/>
         </div>
     )
 }

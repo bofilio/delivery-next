@@ -1,13 +1,15 @@
 import React from 'react'
-import CloseModal from './CloseModal'
-import ClockIcon from '../icons/ClockIcon'
-import MapIcon from '../icons/MapIcon'
-import CheckIcon from '../icons/CheckIcon'
-import ArrowDownIcon from '../icons/ArrowDownIcon'
-import MessageIcon from '../icons/MessageIcon'
-import CloseIcon from '../icons/CloseIcon'
+import CloseModal from '../../modals/CloseModal'
+import ClockIcon from '../../icons/ClockIcon'
+import MapIcon from '../../icons/MapIcon'
+import CheckIcon from '../../icons/CheckIcon'
+import ArrowDownIcon from '../../icons/ArrowDownIcon'
+import MessageIcon from '../../icons/MessageIcon'
+import CloseIcon from '../../icons/CloseIcon'
+import Modal from '../../modals/Modal'
 const OderTracker = () => {
     return (
+        <Modal className="fixed flex justify-end top-0 left-0 w-full h-full   items-center z-40">
         <div className="relative flex flex-col  bg-light h-full w-full overflow-y-auto max-w-sm rounded-l-3xl">
             <CloseModal className=" z-50 absolute top-8 right-8 ">
                 <div className="bg-white p-2 rounded-lg">
@@ -35,7 +37,7 @@ const OderTracker = () => {
                             </div>
                         </div>
                     </div>
-                    {/**component */}
+                    {/**convert that to component later */}
                     <div className="mt-6 flex items-center bg-gray-32 rounded-sm">
                         <div className="flex  w-2/12 pr-1" >
                             <span className="w-full bg-secondary rounded-sm" style={{ height: '6px' }}></span>
@@ -83,6 +85,8 @@ const OderTracker = () => {
                 </div>
             </div>
         </div>
+        </Modal>
+        
     )
 }
 

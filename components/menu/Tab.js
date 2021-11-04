@@ -7,8 +7,8 @@ const Tab = ({ children, title,id,className }) => {
         setActiveId(tab_id);
     }
     return (
-            <div className={(active_id==id?" bg-primary text-light font-bold ":" bg-light text-gray " )+
-            " flex items-center justify-center cursor-pointer rounded-lg "+className}
+            <div className={`${className} ${active_id==id?" bg-primary text-light  ":" bg-light text-gray"} 
+             flex items-center justify-center cursor-pointer rounded-lg font-bold`}
             onClick={(e,tab_id)=>changeActiveTab(e,id)}
             >
                 {children}

@@ -5,7 +5,7 @@ import ClockIcon from '../icons/ClockIcon'
 import Modal from '../../components/modals/Modal'
 import OpenModal from '../../components/modals/OpenModal.js'
 import { ModalProvider } from '../../contexts/ModalContext'
-import OrderDetailsModal from '../modals/OrderDetailsModal'
+import OrderDetailsModal from './modals/OrderDetailsModal'
 const PreviousOrder = () => {
     return (
         <div className="p-4 flex flex-col justify-between lg:w-80 w-full text-light lg:mr-8 mr-0 lg:mb-8 mb-6 rounded-2xl">
@@ -45,10 +45,8 @@ const PreviousOrder = () => {
                     <OpenModal className="flex-grow px-4 text-center py-2 bg-secondary text-light rounded-lg  font-bold">
                         Details
                     </OpenModal>
-                    <Modal className="fixed flex justify-end top-0 left-0 w-full h-full items-center z-40">
-                        <OrderDetailsModal/>
-                    </Modal>
 
+                    <OrderDetailsModal />
                     <button className="px-4 py-2 bg-tr-secondary text-secondary rounded-lg flex-grow font-bold"> Get help</button>
                 </div>
             </ModalProvider>

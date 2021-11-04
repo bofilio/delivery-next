@@ -1,16 +1,13 @@
 import React from 'react'
-import CloseModal from './CloseModal'
-import CloseIcon from '../icons/CloseIcon'
-import CreditCardIcon from '../icons/CreditCardIcon'
-import HDotes from '../icons/HDotes'
-import StartIcon from '../icons/StartIcon'
-import AddUserIcon from '../icons/AddUserIcon'
-import FireIcon from '../icons/FireIcon'
-import Badge from '../util/Badge'
-import ClockIcon from '../icons/ClockIcon'
+import CloseModal from '../../modals/CloseModal'
+import CloseIcon from '../../icons/CloseIcon'
+import StartIcon from '../../icons/StarIcon'
+import FireIcon from '../../icons/FireIcon'
+import Badge from '../../util/Badge'
+import ClockIcon from '../../icons/ClockIcon'
 const SearchFilterModal = () => {
     return (
-        <div className="relative text-dark flex flex-col  bg-white h-full w-full overflow-y-auto max-w-sm rounded-l-3xl p-8">
+        <div className="relative text-dark flex flex-col bg-white h-full w-full overflow-y-auto max-w-sm rounded-l-3xl p-8">
             <CloseModal className=" z-50 absolute top-8 right-8 ">
                 <div className=" bg-light p-2 rounded-lg ">
                     <CloseIcon className="fill-current w-6 h-6" />

@@ -5,7 +5,7 @@ const InputBlock = ({icon,label,default_value,type,placeholder,color, variant}) 
         case "sm":
             return (
                 <div className="flex items-center">
-                    <div className={"bg-tr-"+color+ " text-"+color +" w-12 h-12 flex items-center justify-center rounded-2xl"}>
+                    <div className={`bg-tr-${color} text-${color} w-12 h-12 flex items-center justify-center rounded-2xl`}>
                         {icon}
                     </div>
                     <div className="flex flex-col pl-6 h-16 border-b-2 border-light justify-around flex-grow ">
@@ -19,7 +19,7 @@ const InputBlock = ({icon,label,default_value,type,placeholder,color, variant}) 
         case "md":
             return (
                 <div className="flex items-center">
-                    <div className={"bg-tr-"+color+ " text-"+color +" w-16 h-16  flex items-center justify-center rounded-2xl"}>
+                    <div className={`bg-tr-${color} text-${color} w-16 h-16 flex items-center justify-center rounded-2xl`}>
                         {icon}
                     </div>
                     <div className="flex flex-col pl-6 h-20 border-b-2 border-light justify-around flex-grow ">
@@ -32,7 +32,7 @@ const InputBlock = ({icon,label,default_value,type,placeholder,color, variant}) 
 
         default:
             return(
-                <div>Specify variant[small, normal,..]</div>
+                <div>Specify variant[sm, md,..]</div>
             )
 
     }

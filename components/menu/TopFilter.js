@@ -1,4 +1,5 @@
 import React from 'react'
+import ArrowTopDownIcon from '../icons/ArrowTopDownIcon';
 
 const TopFilter = ({ variant, icon, title, placeholder }) => {
     switch (variant) {
@@ -9,24 +10,18 @@ const TopFilter = ({ variant, icon, title, placeholder }) => {
                         {icon}
                         <span className="ml-6 text-sm text-dark font-bold">{title}</span>
                     </div>
-                    <div className="flex items-center text-gray">
+                    <div className="flex items-center text-gray ">
                         <span className="ml-3 text-sm ">{placeholder}</span>
-                        <svg className="w-4 h-4 ml-4 text-dark" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.175 10L8 13.7116L11.825 10L13 11.1482L8 16L3 11.1482L4.175 10Z" fill="currentColor" />
-                            <path d="M11.825 6L8 2.28841L4.175 6L3 4.85175L8 0L13 4.85175L11.825 6Z" fill="currentColor" />
-                        </svg>
+                        <ArrowTopDownIcon className="w-4 h-4 ml-1"/>
                     </div>
                 </div>
             );
         case "md":
             return (
-                <div className="flex items-center">
+                <div className="flex items-center space-x-1">
                     {icon}
                     <span className="ml-3 text-sm font-semibold text-dark">{placeholder}</span>
-                    <svg className="w-4 h-4 ml-2" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.175 10L8 13.7116L11.825 10L13 11.1482L8 16L3 11.1482L4.175 10Z" fill="black" />
-                        <path d="M11.825 6L8 2.28841L4.175 6L3 4.85175L8 0L13 4.85175L11.825 6Z" fill="black" />
-                    </svg>
+                    <ArrowTopDownIcon className="w-4 h-4 ml-1"/>
                 </div>
             )
     }
