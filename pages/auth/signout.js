@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect } from 'react'
 import Alert from '../../components/util/Alert';
 import LoadingScreen from '../../components/util/LoadingScreen';
-import useFireBaseAuth from '../../data_acess_layer/firebaseHooks';
+import useFireBaseAuth from '../../firebase/hooks/useFireBaseAuth';
 
 const signout = () => {
     const { state, performAction } = useFireBaseAuth();

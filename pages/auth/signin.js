@@ -5,14 +5,14 @@ import InputBlock from '../../components/auth/InputBlock'
 import KeyIcon from '../../components/icons/KeyIcon'
 import MailIcon from '../../components/icons/MailIcon'
 import { useRouter } from 'next/router'
-import useFireBaseAuth from '../../data_acess_layer/firebaseHooks'
+import useFireBaseAuth from '../../firebase/hooks/useFireBaseAuth'
 import LoadingScreen from '../../components/util/LoadingScreen'
 import Alert from '../../components/util/Alert'
 const SignIn = () => {
 
     const { state, performAction } = useFireBaseAuth();
     const router = useRouter();
-
+    
     async function handleSubmit(e) {
         e.preventDefault();
         await performAction("signin", { email: e.target.email.value, password: e.target.password.value });
@@ -20,6 +20,7 @@ const SignIn = () => {
     useEffect(() => {
         state.uid ? router.push("/") : "do nothing";
     }, [state])
+
     return (
         <div className="flex lg:flex-row flex-col min-h-screen">
             {

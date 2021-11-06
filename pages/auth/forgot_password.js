@@ -6,7 +6,7 @@ import ForgotPasswordModal from '../../components/auth/modals/ForgotPasswordModa
 import Modal from '../../components/modals/Modal'
 import OpenModal from '../../components/modals/OpenModal.js'
 import { ModalProvider } from '../../contexts/ModalContext'
-import useFireBaseAuth from '../../data_acess_layer/firebaseHooks'
+import useFireBaseAuth from '../../firebase/hooks/useFireBaseAuth'
 import LoadingScreen from '../../components/util/LoadingScreen'
 import Alert from '../../components/util/Alert'
 

@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
-import app from './firebase'
+import { useState } from 'react'
+import { auth } from '../firebase'
 import {
-    getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,
-    sendEmailVerification, sendPasswordResetEmail, deleteUser,reauthenticateWithCredential
+    createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,
+    sendEmailVerification, sendPasswordResetEmail, deleteUser, reauthenticateWithCredential,
+    signInWithPopup, GoogleAuthProvider
 } from "firebase/auth";
-
-const auth = getAuth(app);
 
 const useFireBaseAuth = () => {
     const [state, setstate] = useState({ isloading: false, uid: '', errormsg: "" })
@@ -65,8 +64,19 @@ const useFireBaseAuth = () => {
             //Use before operations such as updatePassword that require tokens from recent sign-in attempts. 
             case "reauthenticate":
                 try {
-                    await reauthenticateWithCredential(auth.currentUser,credential)
+                    await reauthenticateWithCredential(auth.currentUser, credential)
                     setstate({ isloading: false, uid: '', errormsg: "" })
+                } catch (err) {
+                    setstate({ isloading: false, uid: '', errormsg: err.message })
+                }; break;
+            case "google_signin":
+                const provider = new GoogleAuthProvider();
+                try {
+                    const result=await signInWithPopup(auth, provider);
+                    //const credential = GoogleAuthProvider.credentialFromResult(result);
+                    //const token = credential.accessToken;
+                    const user = result.user;
+                    setstate({ isloading: false, uid: user.uid, errormsg: "" })
                 } catch (err) {
                     setstate({ isloading: false, uid: '', errormsg: err.message })
                 }; break;

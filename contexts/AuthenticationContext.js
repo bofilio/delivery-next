@@ -1,9 +1,8 @@
 import React,{useState,useEffect,createContext} from 'react'
 import {useRouter} from 'next/router'
 export const AuthenticationContext=createContext();
-import app from '../data_acess_layer/firebase'
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-const auth = getAuth(app);
+import {auth} from '../firebase/firebase'
+import { onAuthStateChanged } from "firebase/auth";
 export const AuthenticationProvider = ({children}) => {
     const [uid, setUid] = useState('');
     useEffect(() => {

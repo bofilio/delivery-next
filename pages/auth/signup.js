@@ -5,7 +5,7 @@ import InputBlock from '../../components/auth/InputBlock'
 import UserIcon from '../../components/icons/UserIcon'
 import MailIcon from '../../components/icons/MailIcon'
 import KeyIcon from '../../components/icons/KeyIcon'
-import useFireBaseAuth from '../../data_acess_layer/firebaseHooks'
+import useFireBaseAuth from '../../firebase/hooks/useFireBaseAuth'
 import Alert from '../../components/util/Alert'
 import LoadingScreen from '../../components/util/LoadingScreen'
 import { useRouter } from 'next/router';
@@ -42,11 +42,7 @@ const SignUp = () => {
                     <div className="mb-12">
                         <h1 className="text-3xl text-dark text-left font-bold mb-3">
                             Create an account
-                        </h1>
-                        <span className="text-xl text-gray">
-
-
-                        </span>
+                        </h1>  
                     </div>
 
                     <form className="flex flex-col" onSubmit={(e) => handleSubmit(e)}>

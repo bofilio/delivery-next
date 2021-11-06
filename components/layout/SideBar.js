@@ -15,10 +15,10 @@ const SideBar = ({ className }) => {
   return (
     <nav className={`${className} fixed bg-light flex-col lg:items-stretch items-center p-4 h-screen max-h-screen overflow-y-auto`}>
       {/*Logo block*/}
-      <div className="flex items-center pt-4 pl-4 justify-between">
+      <div className="w-full flex items-center pt-4 pl-4 justify-between">
         <Logo variant="normal" text_color="text-black" />
         <Link href="/auth/signout">
-        <div className="cursor-pointer sm:block md:hidden lg:block"><SignoutIcon className=" w-6 h-6 text-gray" /></div>
+        <div className="cursor-pointer sm:block md:hidden lg:block "><SignoutIcon className=" w-6 h-6 text-gray" /></div>
         </Link>
       </div>
       {/*Logo block End*/}
@@ -60,7 +60,7 @@ const SideBar = ({ className }) => {
           <Avatar img="/img/user.svg" className="bg-tertiary" />
           <div className=" sm:flex md:hidden lg:flex flex flex-col ml-5">
             <h1 className="text-sm text-dark font-bold">{localStorage.getItem("email").split('@')[0]}</h1>
-            <p className=" text-gray text-xs">{localStorage.getItem("email")}</p>
+            <p className=" hidden md:block text-gray text-xs">{localStorage.getItem("email")}</p>
           </div>
           <div className="flex-grow"></div>
           <div className="sm:flex md:hidden lg:flex flex flex-col">

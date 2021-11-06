@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
-import { AuthenticationContext } from '../../contexts/AuthenticationContext'
-
+// wrape any section that would require authentication with this component 
 const AuthRequired = ({ children }) => {
     const [uid, setuid] = useState('')
     const router = useRouter();
