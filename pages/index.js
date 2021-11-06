@@ -1,6 +1,6 @@
 
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import React,{ useEffect,useContext } from 'react'
 import Category from '../components/content/Category'
 import SectionHead from '../components/util/SectionHead'
 import Restaurant from '../components/content/Restaurant'
@@ -9,12 +9,8 @@ import SeeAllLink from '../components/util/SeeAllLink'
 import RestaurantsSection from '../components/content/RestaurantsSection'
 import FoodSection from '../components/content/FoodSection'
 import FireIcon from '../components/icons/FireIcon'
-
 export default function Home() {
-  const router = useRouter();
-  useEffect(() => {
-    //router.push('auth/signin','auth/signin');
-  }, [])
+  
   return (
     < >     
         <SectionHead title="Explore categories">

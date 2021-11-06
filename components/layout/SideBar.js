@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import Link from 'next/link'
 import Logo from '../util/Logo'
 import SideBareMenu from '../menu/SideBareMenu'
@@ -9,12 +9,17 @@ import LongArrowRight from '../icons/LongArrowRight'
 import ArrowDownIcon from '../icons/ArrowDownIcon'
 import ArrowTopIcon from '../icons/ArrowTopIcon'
 import Avatar from '../util/Avatar'
+import SignoutIcon from '../icons/SignoutIcon'
 const SideBar = ({ className }) => {
+ 
   return (
     <nav className={`${className} fixed bg-light flex-col lg:items-stretch items-center p-4 h-screen max-h-screen overflow-y-auto`}>
       {/*Logo block*/}
-      <div className="flex items-center pt-4 pl-4">
+      <div className="flex items-center pt-4 pl-4 justify-between">
         <Logo variant="normal" text_color="text-black" />
+        <Link href="/auth/signout">
+        <div className="cursor-pointer sm:block md:hidden lg:block"><SignoutIcon className=" w-6 h-6 text-gray" /></div>
+        </Link>
       </div>
       {/*Logo block End*/}
       {/*Menu block*/}
@@ -48,12 +53,14 @@ const SideBar = ({ className }) => {
       {/*Adds block End*/}
       <div className="flex-grow"></div>
       {/*Profile block*/}
-      <Link href="/auth/signin">
+      <Link href="/auth/signout">
+        <div className="cursor-pointer sm:hidden md:block lg:hidden"><SignoutIcon className=" w-6 h-6 text-gray" /></div>
+        </Link>
         <div className=" mt-12 mb-4 w-full px-4 flex items-center box-border relative cursor-pointer">
-          <Avatar img="/img/user.svg" className="bg-tertiary"/>
+          <Avatar img="/img/user.svg" className="bg-tertiary" />
           <div className=" sm:flex md:hidden lg:flex flex flex-col ml-5">
-            <h1 className="text-sm text-dark font-bold">Mark Clarke</h1>
-            <p className=" text-gray text-xs">markclarke@gmail.com</p>
+            <h1 className="text-sm text-dark font-bold">{localStorage.getItem("email").split('@')[0]}</h1>
+            <p className=" text-gray text-xs">{localStorage.getItem("email")}</p>
           </div>
           <div className="flex-grow"></div>
           <div className="sm:flex md:hidden lg:flex flex flex-col">
@@ -61,7 +68,6 @@ const SideBar = ({ className }) => {
             <ArrowDownIcon className="w-4 h-4 " />
           </div>
         </div>
-      </Link>
       {/*Profile block End*/}
     </nav>
   )

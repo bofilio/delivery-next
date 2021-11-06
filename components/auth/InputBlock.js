@@ -1,6 +1,6 @@
 import React from 'react'
 
-const InputBlock = ({icon,label,default_value,type,placeholder,color, variant}) => {
+const InputBlock = ({name,icon,label,default_value,type,placeholder,color, variant}) => {
     switch(variant){
         case "sm":
             return (
@@ -9,8 +9,8 @@ const InputBlock = ({icon,label,default_value,type,placeholder,color, variant}) 
                         {icon}
                     </div>
                     <div className="flex flex-col pl-6 h-16 border-b-2 border-light justify-around flex-grow ">
-                        <label className="text-xs text-dark font-bold uppercase" htmlFor="fullname">{label}</label>
-                        <input className="w-full text-gray focus:outline-none" name="fullname" type={type}
+                        <label className="text-xs text-dark font-bold uppercase" htmlFor={name}>{label}</label>
+                        <input name={name} className="w-full text-gray focus:outline-none"  type={type}
                             placeholder={placeholder} defaultValue={default_value} onChange={() => { }} />
                     </div>
                 </div>
@@ -22,9 +22,9 @@ const InputBlock = ({icon,label,default_value,type,placeholder,color, variant}) 
                     <div className={`bg-tr-${color} text-${color} w-16 h-16 flex items-center justify-center rounded-2xl`}>
                         {icon}
                     </div>
-                    <div className="flex flex-col pl-6 h-20 border-b-2 border-light justify-around flex-grow ">
-                        <label className="text-xs text-dark font-bold uppercase" htmlFor="fullname">{label}</label>
-                        <input className="w-full text-xl text-gray focus:outline-none" name="fullname" type={type}
+                    <div className="flex flex-col pl-6 h-16 border-b-2 border-light justify-around flex-grow ">
+                        <label className="text-xs text-dark font-bold uppercase" htmlFor={name}>{label}</label>
+                        <input name={name} className="w-full text-gray focus:outline-none"  type={type}
                             placeholder={placeholder} defaultValue={default_value} onChange={() => { }} />
                     </div>
                 </div>
