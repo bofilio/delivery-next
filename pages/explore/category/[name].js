@@ -7,7 +7,7 @@ const categoryPage = () => {
     const { name } = router.query;
     return (
         <div>
-            <SectionHead className="mt-12 mb-4" title={category} />
+            <SectionHead className="mt-12 mb-4" title={name} />
             <div className="flex flex-wrap w-full">
                 <FoodOffer/>
                 <FoodOffer/>
