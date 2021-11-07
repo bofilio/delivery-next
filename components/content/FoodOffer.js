@@ -5,7 +5,7 @@ import StarIcon from '../icons/StarIcon'
 import Badge from '../util/Badge'
 const FoodOffer = () => {
     return (
-        <div className="flex flex-col lg:w-80 w-full flex-shrink-0 lg:p-4 p-0 mb-8 lg:mb-0  ">
+        <div className="flex flex-col lg:w-80 md:w-72 w-full flex-shrink-0  md:p-4 lg:p-4  p-0  md:mb-0 lg:mb-0 mb-8 ">
             <img className="w-full  h-full rounded-2xl flex-grow" src="/media/salade.png" alt="" />
             <div className="mt-4 flex items-center justify-between">
                 <h1 className=" text-base text-dark font-bold">Spicy Na Thai Town</h1>
