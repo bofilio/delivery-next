@@ -19,14 +19,11 @@ import CartModal from './modals/CartModal'
 
 let currentRoute = "/";
 const TopBar = () => {
-    const router = useRouter();
+    const router=useRouter();
     const goToSearchPage = (e) => {
         e.preventDefault();
-        if (router.route.indexOf("search") < 0) {
-
-            currentRoute = router.route;
-           const {pid}=router.query
-            console.log(pid);
+        if (router.asPath.indexOf("search") < 0) {
+            currentRoute = router.asPath;
         }
         //go to search page when use search for somthing ,and go back whaen he clears the search input
         e.target.value ? router.push("/search") : router.push(currentRoute)
