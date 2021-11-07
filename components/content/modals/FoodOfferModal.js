@@ -1,6 +1,6 @@
 import React from 'react'
 import CloseIcon from '../../icons/CloseIcon'
-import LoveIcon from '../../icons/loveIcon'
+import HeartIcon from '../../icons/HeartIcon'
 import MinusIcon from '../../icons/MinusIcon'
 import PlusIcon from '../../icons/PlusIcon'
 import CloseModal from '../../modals/CloseModal'
@@ -18,7 +18,7 @@ const FoodOfferModal = ({ name }) => {
                         </div>
                     </CloseModal>
                     <button className=" z-50 absolute bg-white p-2 bg-primary rounded-lg top-8 left-8 ">
-                        <LoveIcon className="fill-current text-light w-6 h-6" />
+                        <HeartIcon className="fill-current text-light w-6 h-6" />
                     </button>
                 </div>
                 <div className="p-8 space-y-7">

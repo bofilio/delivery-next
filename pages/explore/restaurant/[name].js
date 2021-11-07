@@ -9,7 +9,7 @@ import LocationIcon from '../../../components/icons/LocationIcon';
 import { TabulationProvider } from '../../../contexts/TabulationContext';
 import Tab from '../../../components/menu/Tab';
 import TabContent from '../../../components/menu/TabContent';
-import LoveIcon from '../../../components/icons/LoveIcon';
+import HeartIcon from '../../../components/icons/HeartIcon';
 const restaurantPage = () => {
     const router = useRouter();
     const { name } = router.query;
@@ -20,7 +20,7 @@ const restaurantPage = () => {
                 <div className=" rounded-2xl lg:h-72 h-40   bg-no-repeat bg-cover w-full" style={{ backgroundImage: `url(/media/restaurant.png)` }}>
                 </div>
                 <button className="absolute bg-light p-3 top-4 lg:top-8 right-4 lg:right-8 rounded-lg">
-                    <LoveIcon className="w-5 h-5 text-dark" />
+                    <HeartIcon className="w-5 h-5 text-dark" />
                 </button>
                 <div className="absolute bg-light rounded-2xl  p-4 lg:p-6 bottom-0 left-1/2 transform -translate-x-1/2 ">
                     <img className=" w-16 h-16 lg:w-24 lg:h-24" src="/media/restaurantLogo.png" alt="restaurant" />

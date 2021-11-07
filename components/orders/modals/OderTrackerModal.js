@@ -15,7 +15,6 @@ const OderTracker = () => {
                 <div className="bg-white p-2 rounded-lg">
                     <CloseIcon className="fill-current text-dark w-6 h-6" />
                 </div>
-
             </CloseModal>
             <img className="w-full h-1/2" src="/img/Map.png" alt="" />
             <div className="flex-grow flex flex-col justify-between p-4">
