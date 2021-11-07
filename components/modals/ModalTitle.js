@@ -1,16 +1,19 @@
 import React from 'react'
 import CloseModal from './CloseModal'
 import CloseIcon from '../icons/CloseIcon'
+import Badge from '../util/Badge'
 
 
-const ModalTitle = ({title}) => {
+const ModalTitle = ({ title }) => {
     return (
         <div className="flex items-center justify-between">
-                <h1 className="text-xl font-bold">{title}</h1>
+            <h1 className="text-xl font-bold">{title}</h1>
+            <Badge color="gray" className="p-3 rounded-lg">
                 <CloseModal className="">
-                    <CloseIcon className="fill-current text-gray w-5 h-5" />
+                    <CloseIcon className=" text-dark w-4 h-4" />
                 </CloseModal>
-            </div>
+            </Badge>
+        </div>
     )
 }
 

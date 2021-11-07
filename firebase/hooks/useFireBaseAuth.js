@@ -82,7 +82,7 @@ const useFireBaseAuth = () => {
                 }; break;
 
             default:
-                setstate({ loading: false, uid: '', error: new Error("action undefined!") })
+                setstate({ loading: false, uid: '', error: "action undefined!" })
         }
     }
 

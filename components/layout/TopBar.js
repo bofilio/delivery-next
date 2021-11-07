@@ -13,8 +13,9 @@ import SearchIcon from '../icons/SearchIcon'
 import SortingIcon from '../icons/SortingIcon'
 import CartIcon from '../icons/CartIcon'
 import SearchFilterModal from './modals/SearchFilterModal'
-import SideBar from './SideBar'
+import SideBarAsModal from './SideBar'
 import ThreeBarMenuIcon from '../icons/ThreeBarMenuIcon'
+import CartModal from './modals/CartModal'
 
 let currentRoute = "/";
 const TopBar = () => {
@@ -22,7 +23,10 @@ const TopBar = () => {
     const goToSearchPage = (e) => {
         e.preventDefault();
         if (router.route.indexOf("search") < 0) {
-            currentRoute = router.route
+
+            currentRoute = router.route;
+           const {pid}=router.query
+            console.log(pid);
         }
         //go to search page when use search for somthing ,and go back whaen he clears the search input
         e.target.value ? router.push("/search") : router.push(currentRoute)
@@ -35,7 +39,7 @@ const TopBar = () => {
                 </OpenModal>
 
                 <Modal className="block md:hidden absolute w-full h-full top-0 left-0">
-                    <SideBar className="flex w-3/4 max-w-xs " />
+                    <SideBarAsModal className="flex w-3/4 max-w-xs " />
                 </Modal>
             </ModalProvider>
 
@@ -63,7 +67,7 @@ const TopBar = () => {
             <div className="flex-grow"></div>
             <div className="flex h-12 ml-12">
                 <form className="flex flex-grow max-w-sm bg-light rounded-xl">
-                    <button className=" flex items-center justify-center w-12 h-12 " >
+                    <button disabled className=" flex items-center justify-center w-12 h-12 " >
                         <SearchIcon className="w-5 h-5" />
                     </button>
                     <input className=" w-full bg-light focus:outline-none rounded-xl "
@@ -79,16 +83,20 @@ const TopBar = () => {
                             <SortingIcon className="w-5 h-5 " />
                         </button>
                     </OpenModal>
-                    <Modal className="fixed flex justify-end top-0 left-0 w-full h-full items-center z-40">
-                        <SearchFilterModal />
-                    </Modal>
+                    <SearchFilterModal />
 
                 </ModalProvider>
 
+                <ModalProvider>
+                    <OpenModal>
+                        <button className="flex items-center justify-center text-light w-12 h-12 rounded-xl bg-secondary ml-4 p-3">
+                            <CartIcon className="w-5 h-5" />
+                        </button>
+                    </OpenModal>
+                    <CartModal />
 
-                <button className="flex items-center justify-center text-light w-12 h-12 rounded-xl bg-secondary ml-4 p-3">
-                    <CartIcon className="w-5 h-5" />
-                </button>
+                </ModalProvider>
+
             </div>
 
         </div>
