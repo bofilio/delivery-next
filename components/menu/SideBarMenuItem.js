@@ -11,7 +11,7 @@ const SideBarMenuItem = ({ children, to, title, active, index, badge }) => {
         {
           badge >0 &&
           <div className="sm:static md:absolute lg:static top-4 right-4  flex  justify-end flex-grow text-xs font-bold text-gray ">
-            <div className={`sm:flex md:hidden lg:flex items-center justify-center w-4 h-4 rounded-full bg-light`}>
+            <div className={`sm:flex md:hidden lg:flex flex items-center justify-center w-4 h-4 rounded-full bg-light`}>
               {badge}
             </div>
             <div className={`${active?"bg-secondary":"bg-primary"}  w-2 h-2 sm:hidden md:inline-block lg:hidden hidden rounded-full relative`}>
