@@ -8,8 +8,9 @@ import FoodOffer from '../components/content/FoodOffer'
 import SeeAllLink from '../components/util/SeeAllLink'
 import RestaurantsSection from '../components/content/RestaurantsSection'
 import FoodSection from '../components/content/FoodSection'
-import FireIcon from '../components/icons/FireIcon'
+
 import Link from 'next/link'
+import CategoryList from '../components/content/CategoryList'
 
 export default function Home() {
 
@@ -20,27 +21,7 @@ export default function Home() {
       </SectionHead>
 
       {/**Categories */}
-      <section className="flex space-x-8 overflow-x-auto">
-
-        <Category color="secondary" title="Popular" options_number={286}
-          icon={<FireIcon className="w-6 h-6" />}
-        />
-        <Category color="primary" title="Fast delivery" options_number={1, 843}
-          icon={<FireIcon className="w-6 h-6" />}
-        />
-        <Category color="tertiary" title="High class" options_number={25}
-          icon={<FireIcon className="w-6 h-6" />}
-        />
-        <Category color="secondary" title="Dine in" options_number={182}
-          icon={<FireIcon className="w-6 h-6" />}
-        />
-        <Category color="primary" title="Pick up" options_number="3,548"
-          icon={<FireIcon className="w-6 h-6" />}
-        />
-        <Category color="tertiary" title="Nearest" options_number="44"
-          icon={<FireIcon className="w-6 h-6" />}
-        />
-      </section>
+     <CategoryList/>
 
       <SectionHead title="Featured restaurants" >
         <SeeAllLink to="#" />

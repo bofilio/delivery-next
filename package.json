@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "firebase": "^9.3.0",
     "next": "11.1.2",
     "next-pwa": "^5.4.0",

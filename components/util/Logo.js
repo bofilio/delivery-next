@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-const Logo = ({ variant, text_color }) => {
+const Logo = ({ variant, text_color,className }) => {
     const logo_img = "/img/hamburger.png";
     switch (variant) {
         case "big":
@@ -21,6 +21,15 @@ const Logo = ({ variant, text_color }) => {
                 </div>
                 </Link>
             );
+            case "notext":
+                return (
+                    <Link href="/">
+                    <div className={`${className} flex items-center cursor-pointer `}>
+                        <img className=" w-20 h-16 " src={logo_img} />
+                    </div>
+                    </Link>
+                );
+
         default: return (
             <>
             </>
