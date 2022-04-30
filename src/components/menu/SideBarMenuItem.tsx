@@ -1,11 +1,21 @@
 import React from 'react'
 import Link from 'next/link'
-const SideBarMenuItem = ({ children, to, title, active, badge }) => {
+
+
+type SideBarMenuItemProps = {
+  icon?: JSX.Element
+  to: string
+  title: string
+  active: boolean
+  badge?: number
+}
+const SideBarMenuItem = (props: SideBarMenuItemProps) => {
+  const { icon, to, title, active, badge } = props
   return (
     <Link href={to}>
       <div
         className={`${active ? "bg-primary text-text-light" : "text-gray-normal"} sm:flex md:inline-block lg:flex flex relative  items-center p-4  rounded-xl cursor-pointer hover:opacity-90 `}>
-        {children}
+        {icon}
         <span className="sm:block md:hidden lg:block  ml-6 font-bold">{title}</span>
         {
           badge > 0 &&

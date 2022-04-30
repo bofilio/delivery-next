@@ -34,9 +34,7 @@ const SideBareMenu = ({ }) => {
             {
                 sideMenu.map(item => (
                     <div  className="w-full sm:w-full md:w-auto lg:w-full" key={item.id}  onClick={(e) => handleActivation(e, item.id)}>
-                        <SideBarMenuItem to={item.to} title={item.title} active={item.id === active_menu} badge={item.badge} >
-                            {item.icon}
-                        </SideBarMenuItem>
+                        <SideBarMenuItem to={item.to} title={item.title} active={item.id === active_menu} icon={item.icon} badge={item.badge} />
                     </div>
 
                 ))

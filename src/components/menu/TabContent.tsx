@@ -1,7 +1,13 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, ReactNode, useContext } from 'react'
 import { TabulationContext } from '../../contexts/TabulationContext'
 
-const TabContent = ({ children, id,className }) => {
+type TabContentProps = {
+    children: ReactNode
+    id: number
+    className?: string
+}
+const TabContent = (props: TabContentProps) => {
+    const { children, id, className } = props
     const [active_id, setActiveId] = useContext(TabulationContext)
     return (
         <div className={`${className} ${id == active_id ? "" : "hidden"}`}>
@@ -9,5 +15,4 @@ const TabContent = ({ children, id,className }) => {
         </div>
     )
 }
-
 export default TabContent

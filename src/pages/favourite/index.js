@@ -12,12 +12,20 @@ const dishes = () => {
         <>
             <TabulationProvider>
                 <div className="flex items-center  text-xs space-x-4 mt-12 mb-8">
-                    <Tab id={1} title="Restaurants (8)" className="p-3 space-x-4 flex-grow lg:flex-grow-0">
-                        <StoreIcon className="w-4 h-4" />
-                    </Tab>
-                    <Tab id={2} title=" Dishes (23)" className="p-3 space-x-4 flex-grow lg:flex-grow-0">
-                        <DishesIcon className="w-4 h-4" />
-                    </Tab>
+                    <Tab
+                        id={1}
+                        title="Restaurants (8)"
+                        className="p-3 space-x-4 flex-grow lg:flex-grow-0"
+                        icon={<StoreIcon className="w-4 h-4" />}
+                    />
+                    <Tab
+                        id={2}
+                        title=" Dishes (23)"
+                        className="p-3 space-x-4 flex-grow lg:flex-grow-0"
+                        icon={<DishesIcon className="w-4 h-4" />}
+                    />
+
+
                 </div>
                 <TabContent id={1}>
                     <section className="flex  lg:flex-row flex-col flex-wrap">
@@ -51,7 +59,7 @@ const dishes = () => {
                         <FoodOffer />
                     </FoodSection>
                 </TabContent>
-                
+
 
             </TabulationProvider>
 
