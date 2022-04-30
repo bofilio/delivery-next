@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bg-branding{
+background-image: url('../../public/img/Image.png');
+} 
+
+/* costum scroll bars */
+*::-webkit-scrollbar {
+    background: transparent;  
+    width: 6px;
+    height: 6px;
+}
+*:hover::-webkit-scrollbar-thumb {
+ background: rgb(218, 218, 218); 
+ border-radius: 3px;
+}
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(218, 218, 218);
+}
