@@ -1,5 +1,5 @@
-const withPWA = require('next-pwa')
-module.exports =withPWA({
+const withPWA = require("next-pwa");
+module.exports = withPWA({
   reactStrictMode: true,
   pwa: {
     dest: "public",
@@ -7,4 +7,8 @@ module.exports =withPWA({
     skipWaiting: true,
     disable: process.env.NODE_ENV === "development",
   },
-})
+  images: {
+    domains: ["pystorebackend.herokuapp.com"],
+    formats: ["image/avif", "image/webp"],
+  },
+});

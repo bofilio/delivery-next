@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 type AvaterProps = {
     className: string
@@ -12,13 +13,13 @@ const Avatar = (props: AvaterProps) => {
         case "sm":
             return (
                 <div className={`${className} flex-shrink-0 flex items-end justify-center w-12 h-12 rounded-full`}>
-                    <img className=" w-10 h-10" src={img} />
+                    <Image width={40} height={40} className=" w-10 h-10" src={img} />
                 </div>
             )
         case "md":
             return (
                 <div className={`${className} flex-shrink-0 flex items-end justify-center w-16 h-16 rounded-full`}>
-                    <img className=" w-14 h-14" src={img} />
+                    <Image width={56} height={56} className=" w-14 h-14" src={img} />
                 </div>
             )
     }
