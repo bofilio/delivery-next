@@ -12,7 +12,7 @@ import TabContent from "../../../components/menu/TabContent";
 import HeartIcon from "../../../components/icons/HeartIcon";
 import Image from "next/image";
 
-const restaurantPage = () => {
+export default function RestaurantPage() {
   const router = useRouter();
   const { name } = router.query;
   return (
@@ -134,6 +134,4 @@ const restaurantPage = () => {
       </TabulationProvider>
     </div>
   );
-};
-
-export default restaurantPage;
+}

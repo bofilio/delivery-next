@@ -1,11 +1,19 @@
 import React from 'react'
-import Avatar from '../../components/util/Avatar'
-import Badge from '../../components/util/Badge'
+import { colorType } from '../../@types'
+import Avatar from '../util/Avatar'
+import Badge from '../util/Badge'
 
-const Messager = ({ tags, active, onClick }) => {
+type MessagerProps = {
+    tags?: { text: string, color: colorType }[],
+    active?: boolean,
+    onClick: () => void
+}
+
+const Messager = (props: MessagerProps) => {
+    const { tags = [], active = false, onClick } = props
     return (
         <div className="flex items-start space-x-6 cursor-pointer" onClick={onClick}>
-            <Avatar className=" flex-shrink-0 bg-primary" img="/img/user.svg" />
+            <Avatar className=" flex-shrink-0 bg-primary" img="/img/user.svg" variant={'sm'} />
             <div className="flex-grow flex flex-col">
                 <div className="flex items-center justify-between">
                     <span>John Smith, CEO </span>
@@ -30,7 +38,7 @@ const Messager = ({ tags, active, onClick }) => {
                         {
                             tags.map(
                                 tag => (
-                                    <Badge key={tag.text} color={tag.color} >
+                                    <Badge key={tag.text} color={tag.color} className={''}  >
                                         {tag.text}
                                     </Badge>
                                 )

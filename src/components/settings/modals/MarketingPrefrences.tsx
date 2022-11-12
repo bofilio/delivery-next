@@ -14,7 +14,7 @@ const MarketingPrefrences = () => {
                                 <label>Promotional emails</label>
                             </div>
                             <div className="flex items-center space-x-4 text-dark font-semibold">
-                                <input className="w-6 h-6" type="checkbox" checked checked onChange={() => { }} />
+                                <input className="w-6 h-6" type="checkbox" checked onChange={() => { }} />
                                 <label>Monthely newsletter</label>
                             </div>
                             <div className="flex items-center space-x-4 ">

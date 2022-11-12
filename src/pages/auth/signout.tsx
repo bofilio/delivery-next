@@ -5,7 +5,7 @@ import LoadingScreen from '../../components/util/LoadingScreen';
 import useFireBaseAuth from '../../firebase/hooks/useFireBaseAuth';
 import { getUserfromStorage } from '../../helpers';
 
-const signout = () => {
+const Signout = () => {
     const { state, performAction } = useFireBaseAuth();
     const router = useRouter();
     useEffect(() => {
@@ -31,4 +31,4 @@ const signout = () => {
     )
 }
 
-export default signout
+export default Signout
