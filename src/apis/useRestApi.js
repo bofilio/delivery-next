@@ -1,16 +1,31 @@
-import React, { useLayoutEffect, useState } from 'react'
-import axios from 'axios'
+import React, { useState } from "react";
+import axios from "axios";
 const useRestApi = (endpoint, request = null) => {
-    const [state, setState] = useState({ data: null, loading: true, errorMessage: "" })
-    
-    useLayoutEffect(() => {
-            axios.get(endpoint).then(response => {
-                setState(oldstate => ({ ...oldstate, loading: false, data: response.data }))
-            }).catch(err => { 
-                setState(oldstate => ({ loading: false, data: null, errorMessage: err.message }))
-            });
-    }, [])
-    return state;
-}
+  const [state, setState] = useState({
+    data: null,
+    loading: true,
+    errorMessage: "",
+  });
 
-export default useRestApi
+  React.useEffect(() => {
+    axios
+      .get(endpoint)
+      .then((response) => {
+        setState((oldstate) => ({
+          ...oldstate,
+          loading: false,
+          data: response.data,
+        }));
+      })
+      .catch((err) => {
+        setState((oldstate) => ({
+          loading: false,
+          data: null,
+          errorMessage: err.message,
+        }));
+      });
+  }, []);
+  return state;
+};
+
+export default useRestApi;

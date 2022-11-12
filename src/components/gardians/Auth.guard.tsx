@@ -3,19 +3,19 @@ import React, { useState, useEffect, useContext } from 'react'
 import { AuthenticationContext } from '../../contexts';
 import { getUserfromStorage } from '../../helpers';
 // wrape any section that would require authentication with this component 
-const AuthRequired = ({ children }) => {
+const AuthGuard = ({ children }) => {
     const currentUser = useContext(AuthenticationContext)
     const router = useRouter();
 
     useEffect(() => {
-        currentUser ? "do nothing" : router.push("/auth/signin");
-    }, [])
+        //currentUser ? "do nothing" : router.push("/auth/signin");
+    }, [currentUser])
 
     return (
         <>
-                {children}    
+            {children}
         </>
     )
 }
 
-export default AuthRequired
+export default AuthGuard
