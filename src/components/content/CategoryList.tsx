@@ -1,10 +1,6 @@
 import React from "react";
 import Category from "./Category";
-import FireIcon from "../icons/FireIcon";
-import settings from "../../apis/apiConfig";
-import useRestApi from "../../apis/useRestApi";
 import LoadingScreen from "../util/LoadingScreen";
-import { useQuery } from "@tanstack/react-query";
 import { useCategories } from "../../services";
 
 const CategoryList = () => {
