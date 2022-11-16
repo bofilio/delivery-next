@@ -8,6 +8,11 @@ import Modal from '../../modals/Modal'
 import Badge from '../../util/Badge'
 
 const FoodOfferModal = ({ name }) => {
+
+    function handelFavourite(){
+console.log("hhhhhhhhhhhhhh");
+
+    }
     return (
         <Modal className="fixed top-0 left-0 w-full h-full   items-center justify-start z-40">
             <div className="  flex flex-col text-dark bg-white h-full w-full max-w-sm shadow-lg z-50  rounded-2xl overflow-y-auto">
@@ -17,8 +22,8 @@ const FoodOfferModal = ({ name }) => {
                             <CloseIcon className="fill-current text-dark w-6 h-6" />
                         </div>
                     </CloseModal>
-                    <button className=" z-50 absolute p-2 bg-primary rounded-lg top-8 left-8 ">
-                        <HeartIcon className="fill-current text-text-light w-6 h-6" />
+                    <button onClick={handelFavourite} className=" z-50 absolute p-2 bg-primary rounded-lg top-8 left-8 ">
+                        <HeartIcon  className="fill-current text-text-light w-6 h-6" />
                     </button>
                 </div>
                 <div className="p-8 space-y-7">

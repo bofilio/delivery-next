@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import FoodSection from '../../components/content/FoodSection'
 import FoodOffer from '../../components/content/FoodOffer'
 import Tab from '../../components/menu/Tab'
@@ -7,7 +7,20 @@ import StoreIcon from '../../components/icons/StoreIcon'
 import DishesIcon from '../../components/icons/DishesIcon'
 import TabContent from '../../components/menu/TabContent'
 import Restaurant from '../../components/content/Restaurant'
-const dishes = () => {
+import { useNibbleStore } from '../../store'
+import { useRouter } from 'next/router'
+import LoadingScreen from '../../components/util/LoadingScreen'
+const Favorite = () => {
+    const currrentUser=useNibbleStore(store=>store.currentUser)
+    const router=useRouter()
+
+    useLayoutEffect(()=>{
+        if(currrentUser===null) router.push("/auth/signin")
+    },[])
+    if(currrentUser===null)
+    return <LoadingScreen/>
+
+    if(currrentUser!==null)
     return (
         <>
             <TabulationProvider>
@@ -29,34 +42,28 @@ const dishes = () => {
                 </div>
                 <TabContent id={1}>
                     <section className="flex  lg:flex-row flex-col flex-wrap">
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
-                        <Restaurant />
+                        <Restaurant className="" name="Liverpool" />
+                        <Restaurant className="" name="Liverpool" />
+                        <Restaurant className="" name="Liverpool" />
+                        <Restaurant className="" name="Liverpool" />
+                        <Restaurant className="" name="Liverpool" />
+                        <Restaurant className="" name="Liverpool" />
+                        <Restaurant className="" name="Liverpool" />
+
                     </section>
                 </TabContent>
                 <TabContent id={2}>
                     <FoodSection>
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
-                        <FoodOffer />
+                        <FoodOffer name={"Tacous"} />
+                        <FoodOffer name={"Tacous"} />
+                        <FoodOffer name={"Tacous"} />
+                        <FoodOffer name={"Tacous"} />
+                        <FoodOffer name={"Tacous"} />
+                        <FoodOffer name={"Tacous"} />
+                        <FoodOffer name={"Tacous"} />
+                        <FoodOffer name={"Tacous"} />
+                        <FoodOffer name={"Tacous"} />
+                        
                     </FoodSection>
                 </TabContent>
 
@@ -68,4 +75,4 @@ const dishes = () => {
     )
 }
 
-export default dishes
+export default Favorite

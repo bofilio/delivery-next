@@ -1,10 +1,26 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+{/* <Link
+  href={{
+    pathname: '/to-your-other-page',
+    query: data // the data
+  }}
+>
+  <a>Some text</a>   
+</Link> */}
+{/* <Link href={`/explore/category/${id}`}> */}
+const Category = ({id, icon, color, title, options_number }) => {
+  const data ={
+    id:id,
+    title:title
+  }
 
-const Category = ({ icon, color, title, options_number }) => {
   return (
-    <Link href={`/explore/category/${title}`}>
+    <Link href={{
+      pathname: `/explore/category/${data.id}`,
+      query:data 
+    }}>
       <div className="flex flex-col items-center w-36 flex-shrink-0 p-6 bg-light rounded-xl mb-8 cursor-pointer">
         <div
           className={` w-12 h-12 p-3 text-text-light rounded-xl`}

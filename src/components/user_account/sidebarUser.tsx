@@ -1,12 +1,13 @@
 import { useContext } from "react"
 import { AuthenticationContext } from "../../contexts"
+import { useNibbleStore } from "../../store"
 import ArrowDownIcon from "../icons/ArrowDownIcon"
 import ArrowTopIcon from "../icons/ArrowTopIcon"
 import Avatar from "../util/Avatar"
 
 
 export const SideBarUser = () => {
-    const user = useContext(AuthenticationContext)
+    const user = useNibbleStore(store=>store.currentUser)
 
     if (user === null) return <></>
 

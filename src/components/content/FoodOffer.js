@@ -31,8 +31,7 @@ const FoodOffer = ({ name }) => {
         <div className="flex items-center space-x-4 mt-2">
           <div className="flex items-center space-x-2 text-gray-normal text-xs">
             <StarIcon className="text-warning w-4 h4" />
-            <p>
-              {" "}
+            <p>              
               <span>4,8</span>(1,873)
             </p>
           </div>

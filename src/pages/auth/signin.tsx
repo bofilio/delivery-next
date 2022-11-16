@@ -9,33 +9,40 @@ import useFireBaseAuth from '../../firebase/hooks/useFireBaseAuth'
 import LoadingScreen from '../../components/util/LoadingScreen'
 import Alert from '../../components/util/Alert'
 import { AuthenticationContext } from '../../contexts'
+import { useNibbleStore } from '../../store'
+import {useFormik} from 'formik'
+import { useLogin } from '../../services'
 const SignIn = () => {
-
-    const { state, performAction } = useFireBaseAuth();
+    
+     const {values, handleChange, handleSubmit, errors, touched}=useFormik({
+        initialValues:{
+            email:"",
+            password:""
+        },
+        onSubmit:(values)=>{
+            login(values)
+        }
+     })
     const router = useRouter();
-    const user = useContext(AuthenticationContext)
-    async function handleSubmit(e) {
-        e.preventDefault();
-        await performAction("SIGNIN", { email: e.target.email.value, password: e.target.password.value });
-    }
-    useEffect(()=>{
-        user && router.back()
-    },[])
+    const currentUser=useNibbleStore(store=>store.currentUser)
+
+    const {mutate:login, isLoading, isError}=useLogin()
+   
     useEffect(() => {
-        state.data ? router.push("/") : "do nothing";
-    }, [state])
+        if(currentUser!==null)  router.back()
+    }, [])
 
     return (
-        <div className="flex lg:flex-row flex-col min-h-screen">
+        <div className="flex top-0 left-0 fixed w-full h-full  lg:flex-row flex-col bg-white">
             {
-                state.isloading && <LoadingScreen />
+                isLoading && <LoadingScreen />
             }
             <Branding />
             <div className=" relative flex-grow flex lg:min-h-screen lg:justify-center justify-items-start lg:p-0 p-12 lg:items-center">
                 {
-                    state.error &&
+                    isError &&
                     <Alert color="error">
-                        {state.error}
+                        error happend!
                     </Alert>
                 }
                 <div className="max-w-xl flex-grow">
@@ -43,13 +50,27 @@ const SignIn = () => {
                         <h1 className="text-3xl text-dark text-left font-bold mb-3">Welcome!</h1>
                         <span className="text-xl text-gray-normal">Sign in to your account to continue </span>
                     </div>
-                    <form className="flex flex-col" onSubmit={(e) => handleSubmit(e)}>
+                    <form className="flex flex-col" onSubmit={handleSubmit}>
                         <div className="space-y-12 mb-12">
-                            <InputBlock name="email" variant="md" color="primary" label="EMAIL ADDRESS" placeholder="Enter your email" type="email"
-                                icon={<MailIcon className="w-6 h-6" />}
+                            <InputBlock 
+                            name="email" 
+                            variant="md" 
+                            color="primary" 
+                            label="EMAIL ADDRESS" 
+                            placeholder="Enter your email" 
+                            type="email"
+                            onChange={handleChange("email")} 
+                            icon={<MailIcon className="w-6 h-6" />}
                             />
-                            <InputBlock name="password" variant="md" color="primary" label="PASSWORD" placeholder="Enter your password" type="password"
-                                icon={<KeyIcon className="w-6 h-6" />}
+                            <InputBlock 
+                            name="password" 
+                            variant="md" 
+                            color="primary" 
+                            label="PASSWORD" 
+                            placeholder="Enter your password" 
+                            type="password"
+                            onChange={handleChange("password")}    
+                            icon={<KeyIcon className="w-6 h-6" />}
                             />
                         </div>
                         <button type="submit" className="rounded-xl bg-transparent-primary text-primary text-base font-bold py-4 px-8 mb-6">
@@ -74,3 +95,5 @@ const SignIn = () => {
 }
 
 export default SignIn
+
+
