@@ -11,16 +11,20 @@ import ArrowTopIcon from '../icons/ArrowTopIcon'
 import Avatar from '../util/Avatar'
 import SignoutIcon from '../icons/SignoutIcon'
 import { SideBarUser } from '../user_account'
+import { useNibbleStore } from '../../store'
 const SideBar = ({ className }) => {
 
+   const currentUser= useNibbleStore(state=>state.currentUser)
   return (
     <nav className={`${className} fixed bg-light flex-col lg:items-stretch items-center p-4 h-screen max-h-screen overflow-y-auto`}>
       {/*Logo block*/}
       <div className="w-full flex items-center pt-4 pl-4 justify-between">
-        <Logo variant="normal" text_color="text-black" />
+        <Logo variant="normal" text_color="text-dark" />
+        {currentUser?
         <Link href="/auth/signout">
-          <div className="cursor-pointer sm:block md:hidden lg:block "><SignoutIcon className=" w-6 h-6 text-gray-normal" /></div>
-        </Link>
+          <a className=" sm:block md:hidden lg:block "><SignoutIcon className=" w-6 h-6 text-gray-normal" /></a>
+        </Link>:null
+        }
       </div>
       {/*Logo block End*/}
       {/*Menu block*/}

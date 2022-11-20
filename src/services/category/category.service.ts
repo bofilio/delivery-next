@@ -13,13 +13,27 @@ async function fetchCategories() {
     throw new Error(err.message);
   }
 }
-
 export function useCategories() {
   return useQuery<categoryType[], Error>(
     [QueryKeys.categories],
     fetchCategories
   );
 }
+// async function fetchCategory(id) {
+//   try {
+//     const category = (await axios.get(`${BACKEND_URL}/categories/${id}`)).data;
+//     return category;
+//   } catch (err) {
+//     throw new Error(err.message);
+//   }
+// }
+// export function useCategory(id) {
+//   return useQuery<categoryType, Error>(
+//     [QueryKeys.category],
+//     fetchCategory
+//   );
+// }
+
 
 export async function createCategory(data: categoryType) {
   try {

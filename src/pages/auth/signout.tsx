@@ -4,28 +4,17 @@ import Alert from '../../components/util/Alert';
 import LoadingScreen from '../../components/util/LoadingScreen';
 import useFireBaseAuth from '../../firebase/hooks/useFireBaseAuth';
 import { getUserfromStorage } from '../../helpers';
+import { logout } from '../../services';
 
 const Signout = () => {
-    const { state, performAction } = useFireBaseAuth();
     const router = useRouter();
     useEffect(() => {
-        getUserfromStorage() !== null &&
-            performAction("SIGNOUT").then(() => {
-                router.push('/auth/signin')
-            })
+       if(getUserfromStorage() !== null ) {
+        logout();
+        router.back();
+       }
     }, [])
-    if (state.isloading)
-        return (
-            <LoadingScreen />
-        )
-    if (state.error)
-        return (
-            <div>
-                <Alert color="error">
-                    {state.error}
-                </Alert>
-            </div>
-        )
+
     return (
         <></>
     )

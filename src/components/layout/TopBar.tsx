@@ -51,13 +51,13 @@ const TopBar = () => {
             </ModalProvider>
 
             <div className="p-3 lg:flex hidden space-x-6">
-                <TopFilter variant="md" placeholder="San Francisco, California"
+                <TopFilter title="" variant="md" placeholder="San Francisco, California"
                     icon={<LocationIcon className="w-6 h-6 text-primary" />}
                 />
-                <TopFilter variant="md" placeholder="Pick up"
+                <TopFilter title="" variant="md" placeholder="Pick up"
                     icon={<ShopingBagIcon className="w-6 h-6 text-secondary" />}
                 />
-                <TopFilter variant="md" placeholder="Best deals"
+                <TopFilter title="" variant="md" placeholder="Best deals"
                     icon={<DiscountIcon className="w-6 h-6 text-warning" />}
                 />
             </div>

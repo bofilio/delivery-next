@@ -1,6 +1,44 @@
 {
+  "users": [
+    {
+      "id": 0,
+      "firstName": "Mark ",
+      "lastName": "Clarke",
+      "email": "markclarke@gmail.com",
+      "password": "123456",
+      "accessToken": "123456",
+      "refreshToken": "123456"
+    },
+    {
+      "firstName": "abdo",
+      "lastName": "degui",
+      "email": "degui@gmail.com",
+      "password": "123456",
+      "accessToken": "1234567",
+      "refreshToken": "1234567",
+      "id": 1
+    },
+    {
+      "firstName": "Hamza",
+      "lastName": "talha",
+      "email": "talha@gmail.com",
+      "password": "123456",
+      "accessToken": "12345",
+      "refreshToken": "12345",
+      "id": 2
+    },
+    {
+      "fullName": "ffff",
+      "email": "deguiabdallah@gmail.com",
+      "password": "123456",
+      "accessToken": "lak64axb",
+      "refreshToken": "lak64axc",
+      "id": "lak64axd"
+    }
+  ],
   "categories": [
     {
+      "id": 0,
       "icon": "http://localhost:3002/static/Fire.svg",
       "color": "#FB6D3A",
       "title": "Popular",
@@ -8,11 +46,463 @@
       "active": true
     },
     {
+      "id": 1,
       "icon": "http://localhost:3002/static/Delivery.svg",
       "color": "#503E9D",
       "title": "Fast delivery",
       "options_number": 568,
       "active": true
+    },
+    {
+      "id": 2,
+      "icon": "http://localhost:3002/static/Delivery.svg",
+      "color": "#503E9D",
+      "title": "Fast delivery",
+      "options_number": 568,
+      "active": true
+    },
+    {
+      "id": 3,
+      "icon": "http://localhost:3002/static/Delivery.svg",
+      "color": "#503E9D",
+      "title": "Fast delivery",
+      "options_number": 568,
+      "active": true
+    }
+  ],
+  "food": [
+    {
+      "id": 0,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageVegetable Skewers.png",
+      "review": "4.3",
+      "nbrLike": "1,600",
+      "duration": "20 - 30 min",
+      "idCategory": 3,
+      "isFavourite": false
+    },
+    {
+      "id": 1,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageChocolate Cheesecake.png",
+      "review": "2.8",
+      "nbrLike": "860",
+      "duration": "18 - 28 min",
+      "idCategory": 1,
+      "isFavourite": false
+    },
+    {
+      "id": 2,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageDelicious Cheese Pie.png",
+      "review": "4.8",
+      "nbrLike": "1,200",
+      "duration": "10 - 15 min",
+      "idCategory": 0,
+      "isFavourite": false
+    },
+    {
+      "id": 3,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageChar-Broiled Chicken Shish.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 3,
+      "isFavourite": false
+    },
+    {
+      "id": 4,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageChef’s Burger Deluxe.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 3,
+      "isFavourite": false
+    },
+    {
+      "id": 5,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageRoasted Vegetables.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 2,
+      "isFavourite": false
+    },
+    {
+      "id": 6,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageChicken Grill.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 1,
+      "isFavourite": false
+    },
+    {
+      "id": 7,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImagePeperoni Pie.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 4,
+      "isFavourite": false
+    },
+    {
+      "id": 8,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageNatural Vegetable Rice.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 1,
+      "isFavourite": false
+    },
+    {
+      "id": 9,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageVegetable Skewers.png",
+      "review": "4.3",
+      "nbrLike": "1,600",
+      "duration": "20 - 30 min",
+      "idCategory": 0,
+      "isFavourite": false
+    },
+    {
+      "id": 10,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageChocolate Cheesecake.png",
+      "review": "2.8",
+      "nbrLike": "860",
+      "duration": "18 - 28 min",
+      "idCategory": 5,
+      "isFavourite": false
+    },
+    {
+      "id": 11,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageDelicious Cheese Pie.png",
+      "review": "4.8",
+      "nbrLike": "1,200",
+      "duration": "10 - 15 min",
+      "idCategory": 5,
+      "isFavourite": false
+    },
+    {
+      "id": 12,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageChar-Broiled Chicken Shish.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 1,
+      "isFavourite": false
+    },
+    {
+      "id": 13,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageChef’s Burger Deluxe.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 2,
+      "isFavourite": false
+    },
+    {
+      "id": 14,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageRoasted Vegetables.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 4,
+      "isFavourite": false
+    },
+    {
+      "id": 15,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageChicken Grill.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 0,
+      "isFavourite": false
+    },
+    {
+      "id": 16,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImagePeperoni Pie.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 5,
+      "isFavourite": false
+    },
+    {
+      "id": 17,
+      "title": "Szechuan Dan Dan Noodles",
+      "badge": "Free delivery",
+      "img": "/delivery-react-app/assets/img/ImageNatural Vegetable Rice.png",
+      "review": "3.3",
+      "nbrLike": "2,600",
+      "duration": "25 - 30 min",
+      "idCategory": 2,
+      "isFavourite": false
+    }
+  ],
+  "restaurant": [
+    {
+      "id": 0,
+      "title": "Burger King",
+      "img": "/delivery-react-app/assets/img/burger.png",
+      "category": "Burger",
+      "distance": "3,4",
+      "review": "4.8",
+      "nbrLike": "1,873",
+      "money": "$",
+      "badge": "Free delivery",
+      "coupon": false,
+      "isFavourite": false
+    },
+    {
+      "id": 1,
+      "title": "Domino’s Pizza",
+      "img": "/delivery-react-app/assets/img/domino.png",
+      "category": "Burger",
+      "distance": "3,4",
+      "review": "4.8",
+      "nbrLike": "1,873",
+      "money": "$$",
+      "badge": "Buy 1 get 1 free",
+      "coupon": true,
+      "isFavourite": false
+    },
+    {
+      "id": 2,
+      "title": "Carrows Restaurant",
+      "img": "/delivery-react-app/assets/img/carrows.png",
+      "category": "Burger",
+      "distance": "3,4",
+      "review": "4.8",
+      "nbrLike": "1,873",
+      "money": "$",
+      "badge": "Free delivery",
+      "coupon": false,
+      "isFavourite": false
+    },
+    {
+      "id": 3,
+      "title": "McDonald’s",
+      "img": "/delivery-react-app/assets/img/mc.png",
+      "category": "Burger",
+      "distance": "3,4",
+      "review": "4.8",
+      "nbrLike": "1,873",
+      "money": "$$$",
+      "badge": "Free delivery",
+      "coupon": false,
+      "isFavourite": false
+    },
+    {
+      "id": 4,
+      "title": "KFC",
+      "img": "/delivery-react-app/assets/img/kfc.png",
+      "category": "Burger",
+      "distance": "3,4",
+      "review": "4.8",
+      "nbrLike": "1,873",
+      "money": "$",
+      "badge": "Buy 2 get 1 free",
+      "coupon": true,
+      "isFavourite": false
+    },
+    {
+      "id": 5,
+      "title": "Pizza Hut",
+      "img": "/delivery-react-app/assets/img/hut.png",
+      "category": "Burger",
+      "distance": "3,4",
+      "review": "4.8",
+      "nbrLike": "1,873",
+      "money": "$",
+      "badge": "Free delivery",
+      "coupon": false,
+      "isFavourite": false
+    }
+  ],
+  "upcomingOrders": [
+    {
+      "id": 0,
+      "title": "Burger King",
+      "number": "#3E0AQ9",
+      "arrival": "60 min"
+    },
+    {
+      "id": 1,
+      "title": "McDonald’s",
+      "number": "#2E3AQ1",
+      "arrival": "30 min"
+    }
+  ],
+  "previousOrders": [
+    {
+      "id": 0,
+      "title": "McDonald’s",
+      "badge": "Completed",
+      "date": "September 16, 2020",
+      "time": "11:54 PM",
+      "dishes": [
+        {
+          "quantity": 1,
+          "title": "Delicious Cheese Pie"
+        },
+        {
+          "quantity": 3,
+          "title": "Peperoni Pie"
+        },
+        {
+          "quantity": 3,
+          "title": "Peperoni Pie"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "McDonald’s",
+      "badge": "Canceled",
+      "date": "60 min",
+      "time": "#3E0AQ9",
+      "dishes": [
+        {
+          "quantity": 1,
+          "title": "Delicious Cheese Pie"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "McDonald’s",
+      "badge": "Completed",
+      "date": "60 min",
+      "time": "#3E0AQ9",
+      "dishes": [
+        {
+          "quantity": 4,
+          "title": "Delicious Cheese Pie"
+        },
+        {
+          "quantity": 1,
+          "title": "Peperoni Pie"
+        },
+        {
+          "quantity": 1,
+          "title": "Peperoni Pie"
+        },
+        {
+          "quantity": 1,
+          "title": "Peperoni Pie"
+        },
+        {
+          "quantity": 1,
+          "title": "Peperoni Pie"
+        },
+        {
+          "quantity": 1,
+          "title": "Peperoni Pie"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "McDonald’s",
+      "badge": "Completed",
+      "date": "60 min",
+      "time": "#3E0AQ9",
+      "dishes": [
+        {
+          "quantity": 1,
+          "title": "Delicious Cheese Pie"
+        },
+        {
+          "quantity": 3,
+          "title": "Peperoni Pie"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "McDonald’s",
+      "badge": "Canceled",
+      "date": "60 min",
+      "time": "#3E0AQ9",
+      "dishes": [
+        {
+          "quantity": 2,
+          "title": "Delicious Cheese Pie"
+        },
+        {
+          "quantity": 1,
+          "title": "Peperoni Pie"
+        }
+      ]
+    }
+  ],
+  "msg": [
+    {
+      "id": 0,
+      "time": "2:07 PM",
+      "isMine": false,
+      "p": {
+        "text": "Hi, I didn’t get my order on time today. 😤 Could you please refund me for a delivery? Thanks.",
+        "link": ""
+      }
+    },
+    {
+      "id": 1,
+      "time": "4:41 PM",
+      "isMine": true,
+      "p": {
+        "text": "Hello! The new dishes are available starting from today. 🍔 You cancheck them out",
+        "link": "here"
+      }
+    },
+    {
+      "id": 2,
+      "time": "12:33 AM",
+      "isMine": false,
+      "p": {
+        "text": " Hi, thanks! I will check it out as soon as I can. 🔥",
+        "link": ""
+      }
+    },
+    {
+      "id": 3,
+      "time": "8:29 AM",
+      "isMine": true,
+      "p": {
+        "text": " Hi, we are running a new promotion in your area. If you want to get a free delivery, then use code ’FREE’ at the checkout. 🤑",
+        "link": ""
+      }
     }
   ]
 }

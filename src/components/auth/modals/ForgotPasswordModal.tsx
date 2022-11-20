@@ -46,7 +46,7 @@ const ForgotPasswordModal = (props:ForgotPasswordModalProps) => {
 
                 </p>
                 <div className="flex justify-center w-full mt-12 space-x-4">
-                    <CloseModal className=" p-4 text-center rounded-lg text-text-light bg-primary hover:bg-purple-700 w-40 font-bold">
+                    <CloseModal  className=" p-4 text-center rounded-lg text-text-light bg-primary hover:bg-purple-700 w-40 font-bold">
                         Got it
                     </CloseModal>
                     <button type="submit" disabled={!errormsg} className=" text-center bg-light p-4 rounded-lg text-dark hover:text-purple-700 w-40 font-bold">

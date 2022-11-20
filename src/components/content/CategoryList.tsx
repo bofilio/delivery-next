@@ -14,7 +14,8 @@ const CategoryList = () => {
         {categories ?
           categories.map((cat) => (
             <Category
-              key={cat.title}
+              key={cat.id}
+              id={cat.id}
               color={cat.color}
               title={cat.title}
               options_number={cat.options_number}
