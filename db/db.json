@@ -1,0 +1,18 @@
+{
+  "categories": [
+    {
+      "icon": "http://localhost:3002/static/Fire.svg",
+      "color": "#FB6D3A",
+      "title": "Popular",
+      "options_number": 230,
+      "active": true
+    },
+    {
+      "icon": "http://localhost:3002/static/Delivery.svg",
+      "color": "#503E9D",
+      "title": "Fast delivery",
+      "options_number": 568,
+      "active": true
+    }
+  ]
+}

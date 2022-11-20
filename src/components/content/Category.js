@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+
 const Category = ({ icon, color, title, options_number }) => {
   return (
     <Link href={`/explore/category/${title}`}>

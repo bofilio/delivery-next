@@ -8,7 +8,7 @@ module.exports = withPWA({
     disable: process.env.NODE_ENV === "development",
   },
   images: {
-    domains: ["pystorebackend.herokuapp.com"],
+    domains: ["pystorebackend.herokuapp.com", "localhost"],
     formats: ["image/avif", "image/webp"],
   },
 });
