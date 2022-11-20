@@ -23,16 +23,18 @@ export function useFood(filter:any) {
 async function fetchFoodByCat(id) {
     try {
       const food = (await axios.get(`${BACKEND_URL}/food?idCategory=${id}`)).data;
+      console.log(id);
+      
       return food;
     } catch (err) {
       throw new Error(err.message);
     }
   }
   // /posts?title=json-server&author=typicode
-  export function useFoodByCat(id) {
+  export function useFoodByCat(data) {
     return useQuery<foodType[], Error>(
-      [QueryKeys.foodByCat,id],
-     ()=> fetchFoodByCat(id)
+      [QueryKeys.foodByCat,data.id],
+     ()=> fetchFoodByCat(data.id)
     );
   }
 

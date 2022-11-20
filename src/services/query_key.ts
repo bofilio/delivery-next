@@ -3,4 +3,6 @@ export const QueryKeys = {
   category: "category",
   food:"food",
   foodByCat:"foodByCat",
+  users:"users",
+
 };

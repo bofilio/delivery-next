@@ -1,49 +1,68 @@
 {
-  
   "users": [
     {
       "id": 0,
-      "fullName": "Mark Clarke",
-      "email": "markclarkegmail.com",
-      "password": "123456"
+      "firstName": "Mark ",
+      "lastName": "Clarke",
+      "email": "markclarke@gmail.com",
+      "password": "123456",
+      "accessToken": "123456",
+      "refreshToken": "123456"
     },
     {
-      "fullName": "Mark Clarke",
-      "email": "markclarke@gmail.com",
-      "password": "******",
+      "firstName": "abdo",
+      "lastName": "degui",
+      "email": "degui@gmail.com",
+      "password": "123456",
+      "accessToken": "1234567",
+      "refreshToken": "1234567",
       "id": 1
     },
     {
-      "fullName": "degui abdallah",
+      "firstName": "Hamza",
+      "lastName": "talha",
+      "email": "talha@gmail.com",
+      "password": "123456",
+      "accessToken": "12345",
+      "refreshToken": "12345",
+      "id": 2
+    },
+    {
+      "fullName": "ffff",
       "email": "deguiabdallah@gmail.com",
       "password": "123456",
-      "id": 2
+      "accessToken": "lak64axb",
+      "refreshToken": "lak64axc",
+      "id": "lak64axd"
     }
   ],
   "categories": [
-    { "id":0,
+    {
+      "id": 0,
       "icon": "http://localhost:3002/static/Fire.svg",
       "color": "#FB6D3A",
       "title": "Popular",
       "options_number": 230,
       "active": true
-
     },
-    { "id":1,
+    {
+      "id": 1,
       "icon": "http://localhost:3002/static/Delivery.svg",
       "color": "#503E9D",
       "title": "Fast delivery",
       "options_number": 568,
       "active": true
     },
-    { "id":2,
+    {
+      "id": 2,
       "icon": "http://localhost:3002/static/Delivery.svg",
       "color": "#503E9D",
       "title": "Fast delivery",
       "options_number": 568,
       "active": true
     },
-    { "id":3,
+    {
+      "id": 3,
       "icon": "http://localhost:3002/static/Delivery.svg",
       "color": "#503E9D",
       "title": "Fast delivery",
@@ -61,7 +80,7 @@
       "nbrLike": "1,600",
       "duration": "20 - 30 min",
       "idCategory": 3,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 1,
@@ -72,7 +91,7 @@
       "nbrLike": "860",
       "duration": "18 - 28 min",
       "idCategory": 1,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 2,
@@ -83,7 +102,7 @@
       "nbrLike": "1,200",
       "duration": "10 - 15 min",
       "idCategory": 0,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 3,
@@ -94,7 +113,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 3,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 4,
@@ -105,7 +124,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 3,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 5,
@@ -116,7 +135,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 2,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 6,
@@ -127,7 +146,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 1,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 7,
@@ -138,7 +157,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 4,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 8,
@@ -149,7 +168,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 1,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 9,
@@ -160,7 +179,7 @@
       "nbrLike": "1,600",
       "duration": "20 - 30 min",
       "idCategory": 0,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 10,
@@ -171,7 +190,7 @@
       "nbrLike": "860",
       "duration": "18 - 28 min",
       "idCategory": 5,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 11,
@@ -182,7 +201,7 @@
       "nbrLike": "1,200",
       "duration": "10 - 15 min",
       "idCategory": 5,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 12,
@@ -193,7 +212,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 1,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 13,
@@ -204,7 +223,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 2,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 14,
@@ -215,7 +234,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 4,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 15,
@@ -226,7 +245,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 0,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 16,
@@ -237,7 +256,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 5,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 17,
@@ -248,7 +267,7 @@
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
       "idCategory": 2,
-      "isFavourite":false
+      "isFavourite": false
     }
   ],
   "restaurant": [
@@ -263,7 +282,7 @@
       "money": "$",
       "badge": "Free delivery",
       "coupon": false,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 1,
@@ -276,7 +295,7 @@
       "money": "$$",
       "badge": "Buy 1 get 1 free",
       "coupon": true,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 2,
@@ -289,7 +308,7 @@
       "money": "$",
       "badge": "Free delivery",
       "coupon": false,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 3,
@@ -302,7 +321,7 @@
       "money": "$$$",
       "badge": "Free delivery",
       "coupon": false,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 4,
@@ -315,7 +334,7 @@
       "money": "$",
       "badge": "Buy 2 get 1 free",
       "coupon": true,
-      "isFavourite":false
+      "isFavourite": false
     },
     {
       "id": 5,
@@ -328,7 +347,7 @@
       "money": "$",
       "badge": "Free delivery",
       "coupon": false,
-      "isFavourite":false
+      "isFavourite": false
     }
   ],
   "upcomingOrders": [
