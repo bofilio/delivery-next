@@ -54,15 +54,15 @@ const Favorite = () => {
                 </TabContent>
                 <TabContent id={2}>
                     <FoodSection>
-                        <FoodOffer name={"Tacous"} />
-                        <FoodOffer name={"Tacous"} />
-                        <FoodOffer name={"Tacous"} />
-                        <FoodOffer name={"Tacous"} />
-                        <FoodOffer name={"Tacous"} />
-                        <FoodOffer name={"Tacous"} />
-                        <FoodOffer name={"Tacous"} />
-                        <FoodOffer name={"Tacous"} />
-                        <FoodOffer name={"Tacous"} />
+                        <FoodOffer foodId={""} name={"Tacous"} />
+                        <FoodOffer foodId={""} name={"Tacous"} />
+                        <FoodOffer foodId={""} name={"Tacous"} />
+                        <FoodOffer foodId={""} name={"Tacous"} />
+                        <FoodOffer foodId={""} name={"Tacous"} />
+                        <FoodOffer foodId={""} name={"Tacous"} />
+                        <FoodOffer foodId={""} name={"Tacous"} />
+                        <FoodOffer foodId={""} name={"Tacous"} />
+                        <FoodOffer foodId={""} name={"Tacous"} />
                         
                     </FoodSection>
                 </TabContent>

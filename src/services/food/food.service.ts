@@ -14,10 +14,24 @@ async function fetchFood(filter:any) {
     throw new Error(err.message);
   }
 }
+async function fetchFoodById(id:string) {
+  try {
+    const food = (await axios.get(`${BACKEND_URL}/food/${id}`)).data;
+    return food;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}
 export function useFood(filter:any) {
   return useQuery<foodType[], Error>(
-    [QueryKeys.food,...Object.values(filter)],
+    [QueryKeys.food,...Object.values(filter??{})],
     ()=>fetchFood(filter)
+  );
+}
+export function useOneFood(id:string) {
+  return useQuery<foodType, Error>(
+    [QueryKeys.food,id],
+    ()=>fetchFoodById(id)
   );
 }
 async function fetchFoodByCat(id) {

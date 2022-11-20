@@ -10,7 +10,7 @@ const CategoryPage = () => {
   const { id,title } = router.query;
   
   const { data: food, isLoading, isError, error } = useFoodByCat({id,title})
-  // const { data: category, isLoading:catLouding, isError: catIsError, error:catError } = useCategory(id)
+
   
   if (isLoading) return <LoadingScreen />
   if (isError) return <div className="text-red-400">!Error {error.message}</div>
@@ -21,7 +21,7 @@ const CategoryPage = () => {
       </SectionHead>
       <div className="flex flex-wrap w-full">
         {
-          food.map((food,index)=> <FoodOffer key={index} name={food.title} />)
+          food.map((food,index)=> <FoodOffer  key={food.id} foodId={food.id} name={food.title} />)
         }
       </div>
     </div>
