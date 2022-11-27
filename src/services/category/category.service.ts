@@ -6,14 +6,11 @@ import { useQuery, useMutation } from "@tanstack/react-query";
 import { QueryKeys } from "../query_key";
 
 async function fetchCategories() {
-  try {
-    const categories = (await axios.get(`${BACKEND_URL}/categories`)).data;
-    return categories;
-  } catch (err) {
-    throw new Error(err.message);
-  }
+
+    return (await axios.get(`${BACKEND_URL}/categories`))?.data;
 }
 export function useCategories() {
+
   return useQuery<categoryType[], Error>(
     [QueryKeys.categories],
     fetchCategories

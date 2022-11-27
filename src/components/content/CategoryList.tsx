@@ -5,8 +5,7 @@ import { useCategories } from "../../services";
 
 const CategoryList = () => {
   const { data: categories, isLoading, isError, error } = useCategories()
-
-  if (isLoading) return <LoadingScreen />
+  if (isLoading) return <h1>loading cat </h1>
   if (isError) return <div className="text-red-400">!Error {error.message}</div>
   return (
     <div className="relative">

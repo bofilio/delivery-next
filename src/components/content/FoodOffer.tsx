@@ -3,33 +3,33 @@ import { ModalProvider } from "../../contexts/ModalContext";
 import BycicalIcon from "../icons/BycicalIcon";
 import DishesIcon from "../icons/DishesIcon";
 import StarIcon from "../icons/StarIcon";
-import Modal from "../modals/Modal";
 import OpenModal from "../modals/OpenModal";
 import Badge from "../util/Badge";
 import FoodOfferModal from "./modals/FoodOfferModal";
-import Image from "next/image";
-import { useOneFood} from "../../services/food/food.service";
+import { useOneFood} from "../../services";
+import {FOOD_IMG_URL} from "../../config"
 const FoodOffer = ({ name, foodId }) => {
   const { data: food, isLoading, isError, error } = useOneFood(foodId)
+
+  
+  
+  
   return (
     <ModalProvider>
       <OpenModal className=" flex flex-col lg:w-80 md:w-72 w-full flex-shrink-0  md:p-4 lg:p-4  p-0  md:mb-0 lg:mb-0 mb-8 ">
         <img
           className="w-full  h-full rounded-2xl flex-grow"
-          src={food?.img}
+          src={FOOD_IMG_URL+food?.img}
           alt={food?.title}
         />
-
         <div className="mt-4 flex items-center justify-between">
           <h1 className=" text-base text-dark font-bold">{food?.title}</h1>
-          
           <Badge
             color="primary"
             className="text-xs rounded font-semibold py-1 px-2"
           >
             {food?.badge}
           </Badge>
-
         </div>
         <div className="flex items-center space-x-4 mt-2">
           <div className="flex items-center space-x-2 text-gray-normal text-xs">
@@ -48,7 +48,7 @@ const FoodOffer = ({ name, foodId }) => {
           </div>
         </div>
       </OpenModal>
-      <FoodOfferModal name="" />
+      <FoodOfferModal foodId={food?.id} imgUrl={FOOD_IMG_URL+food?.img} name={food?.title} />
     </ModalProvider>
   );
 };

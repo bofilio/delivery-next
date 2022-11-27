@@ -5,10 +5,10 @@ import InputBlock from '../../components/auth/InputBlock'
 import KeyIcon from '../../components/icons/KeyIcon'
 import MailIcon from '../../components/icons/MailIcon'
 import { useRouter } from 'next/router'
-import useFireBaseAuth from '../../firebase/hooks/useFireBaseAuth'
+
 import LoadingScreen from '../../components/util/LoadingScreen'
 import Alert from '../../components/util/Alert'
-import { AuthenticationContext } from '../../contexts'
+
 import { useNibbleStore } from '../../store'
 import {useFormik} from 'formik'
 import { useLogin } from '../../services'

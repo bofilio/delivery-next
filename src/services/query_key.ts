@@ -4,5 +4,6 @@ export const QueryKeys = {
   food:"food",
   foodByCat:"foodByCat",
   users:"users",
+  restaurants:"restaurants",
 
 };

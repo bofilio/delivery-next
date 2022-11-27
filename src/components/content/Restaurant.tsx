@@ -2,10 +2,13 @@ import React from "react";
 import CashIcon from "../icons/CashIcon";
 import Link from "next/link";
 import Image from "next/image";
+import { RESTAURNT_IMG_URL } from "../../config";
+import { restaurantType } from "../../@types";
 
-const Restaurant = ({ className, name }) => {
+const Restaurant = ( {className, name,nbrLike,review,distance,badge,category,img,idRest} ) => {
   return (
-    <Link href={`/explore/restaurant/${name}`}>
+
+    <Link href={`/explore/restaurant/${idRest}`}>
       <div
         className={`flex flex-shrink-0 mr-8 mb-8 cursor-pointer ${className}`}
       >
@@ -14,7 +17,7 @@ const Restaurant = ({ className, name }) => {
             width={64}
             height={64}
             className="w-16 h-16"
-            src="/img/burgerKing.png"
+            src={RESTAURNT_IMG_URL +img}
             alt=""
           />
         </div>
@@ -34,8 +37,8 @@ const Restaurant = ({ className, name }) => {
                 />
               </svg>
               <p>
-                {" "}
-                <span>4,8</span>(1,873)
+                
+                <span>{review}</span>({nbrLike})
               </p>
             </div>
 
@@ -53,7 +56,7 @@ const Restaurant = ({ className, name }) => {
                   fill="#A3A3A4"
                 />
               </svg>
-              <span>Burger</span>
+              <span>{category}</span>
             </div>
             <div className="flex items-center space-x-2 text-xs text-gray-normal">
               <CashIcon className="w-4 h-4" />
@@ -62,7 +65,7 @@ const Restaurant = ({ className, name }) => {
           </div>
           <div className="flex items-center space-x-4 text-xs text-gray-normal">
             <span className="p-1 bg-transparent-primary text-primary font-semibold">
-              Free delivery
+              {badge}
             </span>
             <div className="flex items-center space-x-2">
               <svg
@@ -78,7 +81,7 @@ const Restaurant = ({ className, name }) => {
                   fill="#A3A3A4"
                 />
               </svg>
-              <span>4,3 km</span>
+              <span>{distance} km</span>
             </div>
           </div>
         </div>
