@@ -1,13 +1,15 @@
 {
   "users": [
     {
-      "id": 0,
+      "id": "0",
       "firstName": "Mark ",
       "lastName": "Clarke",
       "email": "markclarke@gmail.com",
       "password": "123456",
       "accessToken": "123456",
-      "refreshToken": "123456"
+      "refreshToken": "123456",
+      "favouriteFood": [],
+      "favouriteRest": []
     },
     {
       "firstName": "abdo",
@@ -16,7 +18,9 @@
       "password": "123456",
       "accessToken": "1234567",
       "refreshToken": "1234567",
-      "id": 1
+      "id": "1",
+      "favouriteFood": [],
+      "favouriteRest": []
     },
     {
       "firstName": "Hamza",
@@ -25,15 +29,26 @@
       "password": "123456",
       "accessToken": "12345",
       "refreshToken": "12345",
-      "id": 2
+      "id": "2",
+      "favouriteFood": [],
+      "favouriteRest": []
     },
     {
       "fullName": "ffff",
       "email": "deguiabdallah@gmail.com",
-      "password": "123456",
+      "password": "",
       "accessToken": "lak64axb",
       "refreshToken": "lak64axc",
-      "id": "lak64axd"
+      "id": "lak64axd",
+      "favouriteFood": [
+        5,
+        13
+      ],
+      "favouriteRest": [
+        "2",
+        "1",
+        "3"
+      ]
     }
   ],
   "categories": [
@@ -55,17 +70,33 @@
     },
     {
       "id": 2,
-      "icon": "http://localhost:3002/static/Delivery.svg",
-      "color": "#503E9D",
-      "title": "Fast delivery",
+      "icon": "http://localhost:3002/static/wallet.svg",
+      "color": "#FACD5D",
+      "title": "High class",
       "options_number": 568,
       "active": true
     },
     {
       "id": 3,
-      "icon": "http://localhost:3002/static/Delivery.svg",
+      "icon": "http://localhost:3002/static/silverware.svg",
+      "color": "#FB6D3A",
+      "title": "Dine in",
+      "options_number": 568,
+      "active": true
+    },
+    {
+      "id": 4,
+      "icon": "http://localhost:3002/static/restaurant.svg",
       "color": "#503E9D",
-      "title": "Fast delivery",
+      "title": "Pick up",
+      "options_number": 568,
+      "active": true
+    },
+    {
+      "id": 4,
+      "icon": "http://localhost:3002/static/map.svg",
+      "color": "#FB6D3A",
+      "title": "Nearset",
       "options_number": 568,
       "active": true
     }
@@ -75,7 +106,7 @@
       "id": 0,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageVegetable Skewers.png",
+      "img": "ImageVegetable Skewers.png",
       "review": "4.3",
       "nbrLike": "1,600",
       "duration": "20 - 30 min",
@@ -86,7 +117,7 @@
       "id": 1,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageChocolate Cheesecake.png",
+      "img": "ImageChocolate Cheesecake.png",
       "review": "2.8",
       "nbrLike": "860",
       "duration": "18 - 28 min",
@@ -97,7 +128,7 @@
       "id": 2,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageDelicious Cheese Pie.png",
+      "img": "ImageDelicious Cheese Pie.png",
       "review": "4.8",
       "nbrLike": "1,200",
       "duration": "10 - 15 min",
@@ -108,7 +139,7 @@
       "id": 3,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageChar-Broiled Chicken Shish.png",
+      "img": "ImageChar-Broiled Chicken Shish.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -119,7 +150,7 @@
       "id": 4,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageChef’s Burger Deluxe.png",
+      "img": "ImageChef’s Burger Deluxe.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -130,7 +161,7 @@
       "id": 5,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageRoasted Vegetables.png",
+      "img": "ImageRoasted Vegetables.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -141,7 +172,7 @@
       "id": 6,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageChicken Grill.png",
+      "img": "ImageChicken Grill.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -152,7 +183,7 @@
       "id": 7,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImagePeperoni Pie.png",
+      "img": "ImagePeperoni Pie.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -163,7 +194,7 @@
       "id": 8,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageNatural Vegetable Rice.png",
+      "img": "ImageNatural Vegetable Rice.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -174,7 +205,7 @@
       "id": 9,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageVegetable Skewers.png",
+      "img": "ImageVegetable Skewers.png",
       "review": "4.3",
       "nbrLike": "1,600",
       "duration": "20 - 30 min",
@@ -185,7 +216,7 @@
       "id": 10,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageChocolate Cheesecake.png",
+      "img": "ImageChocolate Cheesecake.png",
       "review": "2.8",
       "nbrLike": "860",
       "duration": "18 - 28 min",
@@ -196,7 +227,7 @@
       "id": 11,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageDelicious Cheese Pie.png",
+      "img": "ImageDelicious Cheese Pie.png",
       "review": "4.8",
       "nbrLike": "1,200",
       "duration": "10 - 15 min",
@@ -207,7 +238,7 @@
       "id": 12,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageChar-Broiled Chicken Shish.png",
+      "img": "ImageChar-Broiled Chicken Shish.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -218,7 +249,7 @@
       "id": 13,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageChef’s Burger Deluxe.png",
+      "img": "ImageChef’s Burger Deluxe.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -229,7 +260,7 @@
       "id": 14,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageRoasted Vegetables.png",
+      "img": "ImageRoasted Vegetables.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -240,7 +271,7 @@
       "id": 15,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageChicken Grill.png",
+      "img": "ImageChicken Grill.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -251,7 +282,7 @@
       "id": 16,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImagePeperoni Pie.png",
+      "img": "ImagePeperoni Pie.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -262,7 +293,7 @@
       "id": 17,
       "title": "Szechuan Dan Dan Noodles",
       "badge": "Free delivery",
-      "img": "/delivery-react-app/assets/img/ImageNatural Vegetable Rice.png",
+      "img": "ImageNatural Vegetable Rice.png",
       "review": "3.3",
       "nbrLike": "2,600",
       "duration": "25 - 30 min",
@@ -272,82 +303,108 @@
   ],
   "restaurant": [
     {
-      "id": 0,
+      "id": "0",
       "title": "Burger King",
-      "img": "/delivery-react-app/assets/img/burger.png",
+      "img": "burger.png",
       "category": "Burger",
-      "distance": "3,4",
-      "review": "4.8",
-      "nbrLike": "1,873",
+      "distance": "9,4",
+      "review": "4.3",
+      "nbrLike": 1873,
       "money": "$",
       "badge": "Free delivery",
       "coupon": false,
       "isFavourite": false
     },
     {
-      "id": 1,
+      "id": "1",
       "title": "Domino’s Pizza",
-      "img": "/delivery-react-app/assets/img/domino.png",
+      "img": "domino.png",
       "category": "Burger",
-      "distance": "3,4",
-      "review": "4.8",
-      "nbrLike": "1,873",
+      "distance": "7,4",
+      "review": "2.8",
+      "nbrLike": 680,
       "money": "$$",
       "badge": "Buy 1 get 1 free",
       "coupon": true,
       "isFavourite": false
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Carrows Restaurant",
-      "img": "/delivery-react-app/assets/img/carrows.png",
+      "img": "carrows.png",
       "category": "Burger",
-      "distance": "3,4",
-      "review": "4.8",
-      "nbrLike": "1,873",
+      "distance": "4,4",
+      "review": "3.8",
+      "nbrLike": 975,
       "money": "$",
       "badge": "Free delivery",
       "coupon": false,
       "isFavourite": false
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "McDonald’s",
-      "img": "/delivery-react-app/assets/img/mc.png",
+      "img": "mc.png",
       "category": "Burger",
-      "distance": "3,4",
+      "distance": "4,4",
       "review": "4.8",
-      "nbrLike": "1,873",
+      "nbrLike": 2030,
       "money": "$$$",
       "badge": "Free delivery",
       "coupon": false,
       "isFavourite": false
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "KFC",
-      "img": "/delivery-react-app/assets/img/kfc.png",
+      "img": "kfc.png",
       "category": "Burger",
       "distance": "3,4",
       "review": "4.8",
-      "nbrLike": "1,873",
+      "nbrLike": 956,
       "money": "$",
       "badge": "Buy 2 get 1 free",
       "coupon": true,
       "isFavourite": false
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Pizza Hut",
-      "img": "/delivery-react-app/assets/img/hut.png",
+      "img": "hut.png",
       "category": "Burger",
-      "distance": "3,4",
-      "review": "4.8",
-      "nbrLike": "1,873",
+      "distance": "20,4",
+      "review": "1.8",
+      "nbrLike": 58,
       "money": "$",
       "badge": "Free delivery",
       "coupon": false,
       "isFavourite": false
+    }
+  ],
+  "userRestaurants": [
+    {
+      "idUser": "2",
+      "idRestaurant": "4"
+    },
+    {
+      "idUser": "lak64axd",
+      "idRestaurant": "0"
+    },
+    {
+      "idUser": "0",
+      "idRestaurant": "3"
+    },
+    {
+      "idUser": "lak64axd",
+      "idRestaurant": "0"
+    },
+    {
+      "idUser": "0",
+      "idRestaurant": "0"
+    },
+    {
+      "idUser": "2",
+      "idRestaurant": "1"
     }
   ],
   "upcomingOrders": [

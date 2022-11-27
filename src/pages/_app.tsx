@@ -3,10 +3,14 @@ import React from 'react';
 import Layout from '../components/layout/Layout'
 import { AuthenticationProvider } from '../contexts/AuthenticationContext';
 import Head from 'next/head';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+// import { ReactQueryDevtools } from 'react-query-devtools';
 const queryClient = new QueryClient({
-  //settings 
+  defaultOptions: {
+    queries:{
+      networkMode:"offlineFirst"
+    }
+  }
 })
 
 function MyApp({ Component, pageProps }) {
@@ -23,6 +27,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </Layout>
       </AuthenticationProvider>
+      {/* <ReactQueryDevtools initialIsOpen={false} position='bottom-right'/> */}
     </QueryClientProvider>
   )
 }
